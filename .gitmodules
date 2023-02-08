@@ -1,0 +1,6 @@
+[submodule "admin"]
+	path = admin
+	url = https://github.com/pmedia84/admin.git
+[submodule "guests"]
+	path = guests
+	url = https://github.com/pmedia84/guests.git
