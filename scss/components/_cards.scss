@@ -1,15 +1,4 @@
-.hero-img-card{
-    padding: .75rem;
-    background-color: hsla(0, 0%, 100%, 0.358);
-    backdrop-filter: blur(4px);
-    width: fit-content;
-    max-width: 500px;
-    border-radius: $border-radius;
-    border: 1px solid $primary-900;
-    img{
-        border-radius: $border-radius-2;
-    }
-}
+
 
 //image card with glass border
 .img-card{
@@ -40,6 +29,7 @@
    text-align: center;
    padding: $spacer-3;
    background-color: $primary-900;
+   border-radius: $border-radius;
    h2{
     font-size: $fs-200;
     font-weight: 300;

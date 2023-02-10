@@ -14,7 +14,6 @@ $story_result = $story->fetch_assoc();
         <div class="hero-container">
             <div class="hero-title text-center ">
                 <h1>Our Story</h1>
-                <p><?= $wedding_name; ?></p>
 
             </div>
             <div class="hero-img-card">
