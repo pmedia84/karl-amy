@@ -595,10 +595,7 @@ a:hover{
         width: 100%;
     } 
 .gallery-hero{
-  background-image: url("../../assets/img/hero/gallery-hero.jpg");
-} 
-.gallery-hero h1,.gallery-hero p{
-  color: black;
+  background-image: url("../../assets/img/hero/index-hero.jpg");
 
 } 
 /*/thumbnails*/ 
@@ -750,7 +747,7 @@ img.hover-shadow {
     height: 150px;
 } 
 .gift-hero{
-    background-image: url("../../assets/img/hero/story-hero.jpg");
+    background-image: url("../../assets/img/hero/index-hero.jpg");
     color: hsl(25, 100%, 95%);
 } 
 .std-card.index-img img{
@@ -764,18 +761,18 @@ img.hover-shadow {
     max-width: max-content;
 } 
 .story-hero{
-    background-image: url("../../assets/img/hero/story-hero.jpg");
+    background-image: url("../../assets/img/hero/index-hero.jpg");
     color: hsl(25, 100%, 95%);
   } 
 .story p{
       margin-block-end: 1.5rem;
     } 
 .day-hero{
-    background-image: url("../../assets/img/hero/day-hero.jpg");
+    background-image: url("../../assets/img/hero/index-hero.jpg");
  color: hsl(25, 100%, 95%);
   } 
 .contact-hero{
-    background-image: url("../../assets/img/hero/day-hero.jpg");
+    background-image: url("../../assets/img/hero/index-hero.jpg");
  color: hsl(25, 100%, 95%);
   } 
 /*Standard column gives equal widths*/ 
