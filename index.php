@@ -1,8 +1,8 @@
 <?php include("inc/header.inc.php");
-
-$story_query = ('SELECT * FROM wedding_story LIMIT  1');
-$story = $db->query($story_query);
-$story_result = $story->fetch_assoc(); ?>
+//fetch image gallery
+$gallery_query = ('SELECT * FROM images WHERE image_placement LIKE "%Home%" LIMIT  6 ');
+$gallery = $db->query($gallery_query);
+ ?>
 <!-- All above this is for each page -->
 <title>The Wedding of <?= $wedding_name; ?></title>
 </head>
@@ -115,53 +115,32 @@ $story_result = $story->fetch_assoc(); ?>
                 </div>
             </div>
         </section>
-
-        <section class="container">
+<?php if($gallery->num_rows>0):?>
+    <section class="container">
             <h2 class="section-title text-center">Gallery</h2>
             <p class="section-subtitle text-center mb-3">Just a few of our favorite pics!</p>
             <div class="std-card gallery primary-950">
                 <div class="gallery-body">
+                <?php foreach($gallery as $gallery_item):?>
                     <div class="gallery-card">
                     <div class="peg"></div>
                         <div class="gallery-card-img">
-                            <img src="assets/img/gallery/1.jpg" height="250px" alt="">
+                            <img src="assets/img/gallery/<?=$gallery_item['image_filename'];?>" height="250px" alt="">
                         </div>
                         <div class="gallery-card-footer">
                             <p>What we love</p>
                         </div>
                     </div>
-                    <div class="gallery-card">
-                        <div class="peg">
-                            
-                        </div>
-                        <div class="gallery-card-img">
-                            <img src="assets/img/gallery/1.jpg" height="" alt="">
-                        </div>
-                        <div class="gallery-card-footer">
-                            <p>What we love</p>
-                        </div>
-                    </div>
-                    <div class="gallery-card">
-                    <div class="peg"></div>
-                        <div class="gallery-card-img">
-                            <img src="assets/img/gallery/1.jpg" height="" alt="">
-                        </div>
-                        <div class="gallery-card-footer">
-                            <p>What we love</p>
-                        </div>
-                    </div>
-                    <div class="gallery-card">
-                    <div class="peg"></div>
-                        <div class="gallery-card-img">
-                            <img src="assets/img/gallery/1.jpg" height="" alt="">
-                        </div>
-                        <div class="gallery-card-footer">
-                            <p>What we love</p>
-                        </div>
-                    </div>
+                    <?php endforeach;?>
                 </div>
             </div>
         </section>
+    
+    
+    
+    
+    <?php endif;?>
+        
         <h2 class="text-center my-7 cta-heading">We Can't Wait To See You!</h2>
     </main>
     <?php include("inc/footer.inc.php"); ?>
