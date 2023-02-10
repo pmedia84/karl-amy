@@ -170,7 +170,12 @@
     cursor: pointer;
    
   }
-
-  .gallery-img img{
+  //wrapper div for images
+  .gallery-img{
+    background-color: red;
     max-height: 25vh;
+  }
+  .gallery-img img{
+    height: 100%;
+    object-fit: cover;
   }

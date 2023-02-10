@@ -760,8 +760,14 @@ img.hover-shadow {
     cursor: pointer;
    
   } 
-.gallery-img img{
+/*wrapper div for images*/ 
+.gallery-img{
+    background-color: red;
     max-height: 25vh;
+  } 
+.gallery-img img{
+    height: 100%;
+    object-fit: cover;
   } 
 .gift-item-thumb{
     height: 150px;
@@ -859,7 +865,7 @@ grid-column: 2/3;
 .grid-auto-sm{ /*auto grid small columns*/
     display: grid;
     gap: 0.25rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 } 
 .container-fluid,
 .container{

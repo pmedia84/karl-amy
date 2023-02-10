@@ -37,7 +37,7 @@ $gallery = $db->query($gallery_query);
                 <div class="grid-row-3col">
                     <div class="profile-card">
                         <div class="profile-card-img">
-                            <img src="assets/img/profiles/karl.JPG" height="250px" alt="">
+                            <img src="assets/img/profiles/karl.jpg" height="250px" alt="">
                         </div>
                         <div class="profile-card-body">
                             <h3>Karl</h3>
@@ -49,7 +49,7 @@ $gallery = $db->query($gallery_query);
                     </div>
                     <div class="profile-card">
                         <div class="profile-card-img">
-                            <img src="assets/img/profiles/amy.JPG" height="250px" alt="">
+                            <img src="assets/img/profiles/amy.jpg" height="250px" alt="">
                         </div>
                         <div class="profile-card-body">
                             <h3>Amy</h3>
