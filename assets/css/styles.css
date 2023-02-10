@@ -758,6 +758,10 @@ img.hover-shadow {
   } 
 .gallery-img{
     cursor: pointer;
+   
+  } 
+.gallery-img img{
+    max-height: 25vh;
   } 
 .gift-item-thumb{
     height: 150px;
