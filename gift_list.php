@@ -13,7 +13,7 @@ $gift_list = $db->query('SELECT * FROM gift_list');
 
     <div class="hero gift-hero">
     <?php include("inc/nav.inc.php"); ?>
-        <div class="container hero-container">
+        <div class="hero-container">
             <div class="hero-title text-center ">
                 <h1>Our Gift List</h1>
                 <p><?= $wedding_name; ?></p>

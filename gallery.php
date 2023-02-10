@@ -11,7 +11,7 @@ $images = $db->query('SELECT * FROM images');
 
   <div class="hero gallery-hero">
   <?php include("inc/nav.inc.php"); ?>
-    <div class="container hero-container">
+    <div class="hero-container">
       <div class="hero-title text-center ">
         <h1>Our Photo Gallery</h1>
         <p><?= $wedding_name; ?></p>

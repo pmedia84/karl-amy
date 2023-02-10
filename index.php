@@ -12,7 +12,7 @@ $gallery = $db->query($gallery_query);
     <div class="hero index-hero">
         <?php include("inc/nav.inc.php"); ?>
 
-        <div class="container hero-container">
+        <div class="hero-container">
 
             <div class="hero-title text-center ">
                 <h1>We Are Getting Married!</h1>

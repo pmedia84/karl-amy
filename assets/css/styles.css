@@ -445,6 +445,7 @@ a:hover{
         font-size: 1.5rem;
     } 
 .hero-container{
+    margin-top: 1.5rem;
     min-height: 95%;
     width: 100%;
     display: grid;
