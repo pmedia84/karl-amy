@@ -128,7 +128,7 @@ $gallery = $db->query($gallery_query);
                             <img src="assets/img/gallery/<?=$gallery_item['image_filename'];?>" height="250px" alt="">
                         </div>
                         <div class="gallery-card-footer">
-                            <p>What we love</p>
+                            <p><?=$gallery_item['image_description'];?></p>
                         </div>
                     </div>
                     <?php endforeach;?>
