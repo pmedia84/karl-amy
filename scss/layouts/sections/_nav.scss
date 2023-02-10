@@ -195,14 +195,11 @@
     .nav-container{
         height: 150px;
     }
-}
-////Nav scrolled settings
-@media(min-width:$md){
-
+    
 .nav-links[data-nav="scrolled"]{
     background-color: $primary-950;
     position: fixed;
-    top: -46px;
+    top: -63px;
     width: 100%;
     padding-inline: $spacer-4;
     animation: nav-slide 400ms ease forwards;
@@ -217,8 +214,9 @@
     background-color: $primary-950;
     position: fixed;
     top: 0;
+    border-radius: 0;
     padding-inline: $spacer-3;
-    animation: nav-closing 300ms ease forwards;
+    animation: nav-closing 400ms ease forwards;
     a{
         color: $primary-900;
         opacity: 0;
@@ -235,15 +233,19 @@
    }
 }
 }
+////Nav scrolled settings
+@media(min-width:$md){
+
+}
 //animate menu slide down
 @keyframes nav-slide{
-    0%{top:-46;}
+    0%{top:-63px;}
     100%{top:0;}
 }
 //animate menu slide down
 @keyframes nav-closing{
     0%{top:0; color:$primary;}
-    100%{top: -50px; color: $primary-900;}
+    100%{top: -63px; color: $primary-900;}
 }
 
 //animate menu slide down

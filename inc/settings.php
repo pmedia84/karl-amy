@@ -6,16 +6,17 @@
 
 include("./email_settings.php");
 //load database for wedding information
-    $wedding_query = ('SELECT wedding_name, wedding_date FROM wedding LIMIT 1');
+    $wedding_query = ('SELECT wedding_name, wedding_date, wedding_time FROM wedding LIMIT 1');
     $wedding_result = $db->query($wedding_query);
 
     $wedding = $db->prepare($wedding_query);
     $wedding->execute();
 
-    $wedding->bind_result($wedding_name, $wedding_date);
+    $wedding->bind_result($wedding_name, $wedding_date, $wedding_time);
     $wedding->fetch();
     $wedding->close();
     $cd_date = $wedding_date; //date variable for countdown timer
+    $cd_time = $wedding_time;
     $weddingdate = strtotime($wedding_date);
     $wedding_date = date('d m Y', $weddingdate);
     //load events

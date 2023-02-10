@@ -61,37 +61,9 @@ function initializeClock(id, endtime) {
     var timeinterval = setInterval(updateClock, 1000);
 }
 
-// ///Intersection Observer
-// const navbar = document.querySelector(".nav-links");
-// const hero = document.querySelector(".hero-title");
-// const body = document.querySelector("body");
-// const options = {
-//     threshold: [0.9],
-//    rootMargin: "-100px 0px 0px 0px",
-// };
 
-// const heroobserver = new IntersectionObserver(function(entries, heroobserver) {
-//     entries.forEach(entry =>{
-//         if(entry.isIntersecting){
-//             navbar.setAttribute('data-nav', "closing");
-//             navbar.addEventListener('animationend', ()=> {
-//                 navbar.setAttribute('data-nav', "ready");
-                
-//             }, {once:true})
-            
-            
-//         }
-//         else{
-//             navbar.setAttribute('data-nav', "scrolled");
-
-//         }
-//     });
-// },options);
-// heroobserver.observe(hero);
-// /////////////////////////////
 window.onscroll = function() {navslide()};
 var navbar = document.querySelector(".nav-links");
-var navcontainer = document.querySelector(".hero");
 
 var sticky = navbar.offsetTop;
 

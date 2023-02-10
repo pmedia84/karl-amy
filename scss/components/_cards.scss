@@ -23,6 +23,7 @@
 .std-card{
     padding: $spacer-3;
     border: 2px solid $primary;
+    border-radius: $border-radius;
 }
 
 //event card with header images and date information
@@ -132,4 +133,56 @@
         max-height: auto;
     }
 
+}
+
+///profile cards ith a decorative border and center card
+.profile-card{
+    padding: $spacer-2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacer-2;
+}
+.profile-card-img img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.profile-card-body{
+    text-align: center;
+    h3{
+        font-weight: 300
+    }
+    font-weight: 200
+
+}
+
+.center-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    place-self: center;
+    height: 80%;
+
+    img{
+        opacity: .8;
+    }
+
+}
+.left, .right{
+    font-family: $ff-handwriting;
+    color: $primary;
+    font-size: $fs-300;
+    
+}
+@media(min-width: $md){
+    .left{
+        align-self: start;
+    }
+    .right{
+        align-self: end;
+    }
 }

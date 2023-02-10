@@ -95,6 +95,23 @@ body{
     color: hsl(25, 100%, 40%);
     font-weight: 300;
 }
+h1{
+    font-size:2.5rem;
+}
+h2{
+    font-size: 2rem;
+}
+h1, h2, h3, h4{
+    font-family: 'Alex Brush', cursive;
+}
+.section-title{
+    font-size: 2.5rem;
+    color: hsl(25, 100%, 40%);
+}
+.section-subtitle{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
 body{
      display: flex;
      flex-direction: column;
@@ -326,14 +343,11 @@ a:hover{
     .nav-container{
         height: 150px;
     }
-} 
-/*//Nav scrolled settings*/ 
-@media(min-width:768px){
-
+    
 .nav-links[data-nav="scrolled"]{
     background-color: hsl(25, 100%, 95%);
     position: fixed;
-    top: -46px;
+    top: -63px;
     width: 100%;
     padding-inline: 2rem;
     animation: nav-slide 400ms ease forwards;
@@ -348,8 +362,9 @@ a:hover{
     background-color: hsl(25, 100%, 95%);
     position: fixed;
     top: 0;
+    border-radius: 0;
     padding-inline: 1.5rem;
-    animation: nav-closing 300ms ease forwards;
+    animation: nav-closing 400ms ease forwards;
 }
     .nav-links[data-nav="closing"] a{
         color: hsl(25, 100%, 90%);
@@ -366,15 +381,19 @@ a:hover{
        opacity: 0;
    }
 } 
+/*//Nav scrolled settings*/ 
+@media(min-width:768px){
+
+} 
 /*animate menu slide down*/ 
 @keyframes nav-slide{
-    0%{top:-46;}
+    0%{top:-63px;}
     100%{top:0;}
 } 
 /*animate menu slide down*/ 
 @keyframes nav-closing{
     0%{top:0; color:hsl(25, 100%, 40%);}
-    100%{top: -50px; color: hsl(25, 100%, 90%);}
+    100%{top: -63px; color: hsl(25, 100%, 90%);}
 } 
 /*animate menu slide down*/ 
 @keyframes nav-ready{
@@ -480,6 +499,85 @@ a:hover{
         width: auto;
         margin: 0 auto;
     } 
+.gallery{
+    background-image: url("../../assets/img/icons/flower-bg-lh.svg"), url("../../assets/img/icons/flower-bg-rh.svg") ;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    background-size: 25%;
+    overflow-x: scroll;
+
+} 
+/*/card to make images look like a instax photo*/ 
+.gallery-card{
+    position: relative;
+    padding: 1.5rem;
+    background-color: #fff;
+    width: 272px;
+    height: 325px;
+    border-radius: 10px;
+    border: 1px solid hsl(25, 100%, 40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 4px 3px 3px 1px rgba(0, 0, 0, 0.2);
+    flex-grow: 0;
+
+} 
+.gallery-card-img img{
+    aspect-ratio: 1/1;
+    width: 234px;
+    height: 234px;
+    object-fit:cover;
+    border-radius: 5px;
+   
+} 
+.gallery-card-footer{
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+} 
+.gallery .gallery-card:nth-child(odd){
+    transform: rotate(5deg);
+} 
+.gallery .gallery-card:nth-child(even){
+    transform: rotate(-5deg);
+} 
+@media(min-width: 768px){
+    .gallery{
+        background-position: left bottom, right bottom;
+        padding-block: 1.5rem;
+        
+    }
+    .gallery-body{
+        padding-block: 2.5rem;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        width: fit-content;
+    }
+    .peg{
+        position: absolute;
+        top: -60px;
+        left: calc(50% - 1.5rem);
+        height: 95px;
+        width: 20px;
+        background-color: #c4b6a2;
+        z-index: 1;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25), 1px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+        .peg::after{
+            content: "";
+            position: absolute;
+            bottom: 25px;
+            left: 0px;
+            width: 22px;
+            height: 3px;
+            border-radius: 1px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.265);
+            border-top: 1px solid rgba(0, 0, 0, 0.265);
+            background-color: silver;
+        }
+} 
 .login-main{/*main body content for login screen and password reset form*/
     display: grid;
     place-items: center;
@@ -1237,6 +1335,7 @@ input:checked + .slider:before {
 .std-card{
     padding: 1.5rem;
     border: 2px solid hsl(25, 100%, 40%);
+    border-radius: 20px;
 }
 /*event card with header images and date information*/
 /*set up as a section with a full width bg image*/
@@ -1349,6 +1448,56 @@ input:checked + .slider:before {
     }
 
 }
+/*/profile cards ith a decorative border and center card*/
+.profile-card{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.profile-card-img img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.profile-card-body{
+    text-align: center;
+
+}
+.profile-card-body h3{
+        font-weight: 300
+    }
+.profile-card-body {
+    font-weight: 200;
+}
+.center-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    place-self: center;
+    height: 80%;
+
+}
+.center-card img{
+        opacity: .8;
+    }
+.left, .right{
+    font-family: 'Alex Brush', cursive;
+    color: hsl(25, 100%, 40%);
+    font-size: 3rem;
+    
+}
+@media(min-width: 768px){
+    .left{
+        align-self: start;
+    }
+    .right{
+        align-self: end;
+    }
+}
 .cookie-overlay {/*container*/
   display: none;
     position: fixed;
@@ -1422,6 +1571,22 @@ input:checked + .slider:before {
 .guest_group .guest-list-actions{
     margin: 0;
 }
+.countdown-container{
+  background-image: url("../../assets/img/hero/index-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items:end;
+  justify-content: center;
+}
+.countdown-body{
+  width: 80%;
+  margin: 0 auto;
+
+}
 .countdown {
     margin: 0 auto;
     display: flex;
@@ -1433,18 +1598,64 @@ input:checked + .slider:before {
   .hours,
   .minutes,
   .seconds {
+    background-color: rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
     display: flex;
     flex-direction: column;
-    font-size: 2.5rem;
-    color: hsl(25, 100%, 40%);
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 200;
+    color: hsl(25, 100%, 95%);
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border: 1px solid hsl(25, 100%, 40%);
+    height: 100%;
   }
 .time {
     text-align: center;
     width: 25%;
-    max-width: 110px;
+    min-height: 90px;
+  }
+.time-footer{
+    background-color: hsl(25, 100%, 40%);
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border: 1px solid hsl(25, 100%, 40%);
+    height: 35px;
   }
 .countdown-subtitle {
-    color: hsl(25, 100%, 40%);
+    color: hsl(25, 100%, 90%);
+  }
+.countdown-footer{
+    position: relative;
+    padding-block: 1.5rem;
+
+  }
+.countdown-footer p{
+      color: hsl(25, 100%, 95%);
+      font-size: 1.25rem;
+    }
+@media(min-width: 768px){
+    .time{
+      width: 110px;
+      height: 120px;
+    }
+    .countdown-footer p::before, .countdown-footer p::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 5px;
+      width: 25%;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+    .countdown-footer p::before{
+      left: 0;
+    }
+    .countdown-footer p::after{
+      right: 0;
+    }
   }
 /*spacing utilities*/
 /*m = margin*/
@@ -1500,6 +1711,9 @@ input:checked + .slider:before {
 }
 .primary-900{
     background-color: hsl(25, 100%, 90%);
+}
+.primary-950{
+    background-color: hsl(25, 100%, 95%);
 }
 .bg-secondary-col{
     /*change bg to secondary col*/

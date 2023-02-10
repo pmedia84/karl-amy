@@ -2,17 +2,18 @@
 
 $story_query = ('SELECT * FROM wedding_story LIMIT  1');
 $story = $db->query($story_query);
-$story_result = $story->fetch_assoc();?>
+$story_result = $story->fetch_assoc(); ?>
 <!-- All above this is for each page -->
 <title>The Wedding of <?= $wedding_name; ?></title>
 </head>
+
 <body>
 
     <div class="hero index-hero">
-    <?php include("inc/nav.inc.php"); ?>
+        <?php include("inc/nav.inc.php"); ?>
 
         <div class="container hero-container">
-        
+
             <div class="hero-title text-center ">
                 <h1>We Are Getting Married!</h1>
             </div>
@@ -27,57 +28,78 @@ $story_result = $story->fetch_assoc();?>
     </div>
 
     <main>
-        <section class="container my-7 text-center">
-            <div class="std-card">
-                <div class="story-intro">
-                    <?php if ($story->num_rows > 0 && $story_result['story_status'] == "Published") :
-                        $story_body = html_entity_decode($story_result['story_body']); ?>
-                        <?= $story_body; ?>
-                    <?php endif; ?>
+        <div class="section-divider my-4">
+            <img src="assets/img/section-divider.svg" alt="">
+        </div>
+
+        <section class="container my-4">
+            <div class="std-card primary-950">
+                <div class="grid-row-3col">
+                    <div class="profile-card">
+                        <div class="profile-card-img">
+                            <img src="assets/img/profiles/karl.JPG" height="250px" alt="">
+                        </div>
+                        <div class="profile-card-body">
+                            <h3>Karl</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores itaque sit corrupti molestiae praesentium aliquid porro eius iure ipsa natus?</p>
+                        </div>
+                    </div>
+                    <div class="center-card">
+                        <span class="left">Karl</span> <img src="assets/img/icons/rings.svg" alt=""><span class="right">Amy</span>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-card-img">
+                            <img src="assets/img/profiles/amy.JPG" height="250px" alt="">
+                        </div>
+                        <div class="profile-card-body">
+                            <h3>Amy</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi consectetur repellendus temporibus nulla dolores hic sit provident? Esse, debitis non!</p>
+                        </div>
+                    </div>
                 </div>
-                <a href="our_story" class="btn-primary my-3">Read More</a>
+                <div class="text-center"><a href="" class="btn-primary my-3 text-center">Read Our Story</a></div>
             </div>
         </section>
-
-        <section class="event-card-section">
-            <div class="container">
-                <div class="event-card-images">
-                    <div class="img-card">
-                        <img src="assets/img/event-card/event-card-img1.jpg" alt="">
-                    </div>
-                    <div class="img-card">
-                        <img src="assets/img/event-card/event-card-img2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="event-card">
-
-                    <div id="clockdiv" class="countdown">
-                        <div class="time">
-                            <span class="days"></span>
+        <section class="countdown-container">
+            <div class="countdown-body">
+                <div id="clockdiv" class="countdown">
+                    <div class="time">
+                        <span class="days"></span>
+                        <div class="time-footer">
                             <p class="countdown-subtitle">Days</p>
                         </div>
-                        <div class="time">
-                            <span class="hours"></span>
+                    </div>
+                    <div class="time">
+                        <span class="hours"></span>
+                        <div class="time-footer">
                             <p class="countdown-subtitle">Hours</p>
                         </div>
-                        <div class="time">
-                            <span class="minutes"></span>
+                    </div>
+                    <div class="time">
+                        <span class="minutes"></span>
+                        <div class="time-footer">
                             <p class="countdown-subtitle">Minutes</p>
                         </div>
-                        <div class="time">
-                            <span class="seconds"></span>
+                    </div>
+                    <div class="time">
+                        <span class="seconds"></span>
+                        <div class="time-footer">
                             <p class="countdown-subtitle">Seconds</p>
                         </div>
                     </div>
-                    <h2>We Can't Wait To Celebrate With You!</h2>
-                    <p>We are saying "I Do" on <?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
-                    <a href="/guests/rsvp" class="btn-primary my-4 btn-cta">RSVP</a>
                 </div>
+
+                <div class="countdown-footer text-center">
+                    <p><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
+                </div>
+
+
             </div>
         </section>
-<div class="my-7 section-divider">
-    <img src="assets/img/flowers.svg" alt="">
-</div>
+
+        <div class="my-7 section-divider">
+            <img src="assets/img/section-divider.svg" alt="">
+        </div>
         <section class="primary-900 my-7">
             <div class="container">
                 <div class="venue-card">
@@ -87,24 +109,66 @@ $story_result = $story->fetch_assoc();?>
                         <p class="venue-card-subtitle"><?= $event_location; ?></p>
                         <p class="venue-card-subtitle"><?= $event_address; ?></p>
                         <p>Find out more about our big day <a href="">Here!</a></p>
-                        <p>You can also check out the venue here: <a href="https://www.mercurebristol.co.uk/">www.mercurebristol.co.uk</a></p>
                     </div>
-                    <img src="assets/img/venue/mercure.jpg" alt="">
+                    <img src="assets/img/venue/venue.jpg" alt="">
 
                 </div>
             </div>
         </section>
-        <h2 class="text-center my-7 cta-heading">See You At The Wedding!</h2>
 
-
-        <img src="assets/img/footer-img.jpg" alt="" class="footer-img-card">
-
-
+        <section class="container">
+            <h2 class="section-title text-center">Gallery</h2>
+            <p class="section-subtitle text-center mb-3">Just a few of our favorite pics!</p>
+            <div class="std-card gallery primary-950">
+                <div class="gallery-body">
+                    <div class="gallery-card">
+                    <div class="peg"></div>
+                        <div class="gallery-card-img">
+                            <img src="assets/img/gallery/1.jpg" height="250px" alt="">
+                        </div>
+                        <div class="gallery-card-footer">
+                            <p>What we love</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <div class="peg">
+                            
+                        </div>
+                        <div class="gallery-card-img">
+                            <img src="assets/img/gallery/1.jpg" height="" alt="">
+                        </div>
+                        <div class="gallery-card-footer">
+                            <p>What we love</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                    <div class="peg"></div>
+                        <div class="gallery-card-img">
+                            <img src="assets/img/gallery/1.jpg" height="" alt="">
+                        </div>
+                        <div class="gallery-card-footer">
+                            <p>What we love</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                    <div class="peg"></div>
+                        <div class="gallery-card-img">
+                            <img src="assets/img/gallery/1.jpg" height="" alt="">
+                        </div>
+                        <div class="gallery-card-footer">
+                            <p>What we love</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h2 class="text-center my-7 cta-heading">We Can't Wait To See You!</h2>
     </main>
     <?php include("inc/footer.inc.php"); ?>
     <script>
-        const deadline = new Date(Date.parse(new Date('<?php echo $cd_date; ?>')));
+        const deadline = new Date(Date.parse(new Date('<?php echo $cd_date." ".$wedding_time; ?>')));
         initializeClock('clockdiv', deadline);
+        
     </script>
 </body>
 
