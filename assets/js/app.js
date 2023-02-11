@@ -107,3 +107,20 @@ function navslide(){
 //     document.body.scrollTop = 0; // For Safari
 //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 //   }
+
+// cookie policy
+$(window).on('load', function() {
+    if (document.cookie.indexOf("accepted_cookies=") < 0) {
+      $('.cookie-overlay').fadeIn(400);
+    }
+  
+    $('.accept-cookies').on('click', function() {
+      document.cookie = "accepted_cookies=yes;"
+      $('.cookie-overlay').fadeOut(400);
+    })
+  
+   
+    $('.close-cookies').on('click', function() {
+      $('.cookie-overlay').fadeOut(400);
+    })
+})
