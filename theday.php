@@ -24,6 +24,9 @@ $events_day_result = $events->fetch_assoc();
     </div>
 
     <main>
+    <div class="section-divider my-4" id="section-one">
+            <img src="assets/img/section-divider.svg" alt="">
+        </div>
         <section class="container my-7 ">
 
             <?php foreach ($events_day as $event) : 
