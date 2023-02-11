@@ -66,7 +66,9 @@ window.onscroll = function() {navslide()};
 var navbar = document.querySelector(".nav-links");
 
 var sticky = navbar.offsetTop;
-
+var returnbtn = document.querySelector(".return");
+var sectionone = document.getElementById("section-one");
+var position = sectionone.offsetTop;
 function navslide(){
     if(window.scrollY>= sticky){
         navbar.setAttribute('data-nav', "scrolled");
@@ -78,25 +80,30 @@ function navslide(){
              
         }, {once:true})
     }
-
-}
-
-window.onscroll = function() {returntop()};
-var returnbtn = document.querySelector(".return");
-var sectionone = document.getElementById("section-one");
-var position = sectionone.offsetTop;
-function returntop(){
-    
     if(window.scrollY>= position){
-        console.log("hi");
         $(".return").addClass("return-active");
     }else{
         $(".return").removeClass("return-active");
     }
+
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function scrolltotop() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
+// window.onscroll = function() {returntop()};
+// var returnbtn = document.querySelector(".return");
+// var sectionone = document.getElementById("section-one");
+// var position = sectionone.offsetTop;
+// function returntop(){
+    
+//     if(window.scrollY>= position){
+//         console.log("hi");
+//         $(".return").addClass("return-active");
+//     }else{
+//         $(".return").removeClass("return-active");
+//     }
+// }
+
+// // When the user clicks on the button, scroll to the top of the document
+// function scrolltotop() {
+//     document.body.scrollTop = 0; // For Safari
+//     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+//   }

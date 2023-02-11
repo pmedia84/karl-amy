@@ -47,7 +47,6 @@
     top: 86px;
     left: 0;
     right: 0;
-    transform: translateX(100%);
     margin: 0;
     padding: 0;
     padding: $spacer-3;
@@ -97,12 +96,12 @@
 }
 
 @keyframes navclose{
-    100%{opacity:0; transform: translateX(100%);}
-    0%{opacity:1; transform: translateX(0%); }
+    100%{opacity:0;}
+    0%{opacity:1;}
 }
 @keyframes navopen{
-    0%{opacity:0; transform: translateX(100%);}
-    100%{opacity:1; transform: translateX(0%);}
+    0%{opacity:0; }
+    100%{opacity:1;}
 }
 
 
