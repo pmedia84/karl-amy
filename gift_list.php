@@ -6,7 +6,7 @@ $gift_list = $db->query('SELECT * FROM gift_list');
 
 ?>
 <!-- All above this is for each page -->
-<title>The Wedding of <?= $wedding_name; ?> | Our Story</title>
+<title>The Wedding of <?= $wedding_name; ?> | Our Gift List</title>
 </head>
 
 <body>

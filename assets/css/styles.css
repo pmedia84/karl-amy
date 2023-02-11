@@ -208,6 +208,7 @@ a:hover{
     top: 86px;
     left: 0;
     right: 0;
+    transform: translateX(100%);
     margin: 0;
     padding: 0;
     padding: 1.5rem;
@@ -227,7 +228,6 @@ a:hover{
         font-size: 1.25rem;
         color: hsl(25, 100%, 40%);
         margin-block: 0.5rem;
-        opacity: 0;
         animation: navopen 300ms ease-in-out forwards;
     } 
 .nav-links a:hover, .nav-links a:focus{
@@ -236,12 +236,8 @@ a:hover{
 /*settings for active menu*/ 
 .nav-links[data-state="opened"]{
     display: block;
-} 
-.nav-links[data-state="opened"] a{
-        opacity: 1;
-        animation: navopen 1s ease-in-out forwards;
-    } 
-.nav-links[data-state="opened"] {
+    transform: translateX(0%);
+
     animation: navopen 400ms ease-in-out forwards;
 } 
 .nav-links[data-state="closing"] {
@@ -258,12 +254,12 @@ a:hover{
     outline-color: hsl(25, 100%, 80%);
 } 
 @keyframes navclose{
-    100%{opacity:0;}
-    0%{opacity:1; }
+    100%{opacity:0; transform: translateX(100%);}
+    0%{opacity:1; transform: translateX(0%); }
 } 
 @keyframes navopen{
-    0%{opacity:0;}
-    100%{opacity:1;}
+    0%{opacity:0; transform: translateX(100%);}
+    100%{opacity:1; transform: translateX(0%);}
 } 
 /*///////////////////////////////////////////////Nav Button///////////////////*/ 
 /*nav button settings*/ 

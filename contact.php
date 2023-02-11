@@ -8,7 +8,7 @@
     <div class="hero contact-hero">
     <?php include("inc/nav.inc.php"); ?>
     <div class="hero-container">
-                <h1 class="hero-title text-center">Our Gift List</h1>
+                <h1 class="hero-title text-center">Get In Touch</h1>
                 <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
             <div class="hero-footer">
                 <span><?= $event_location; ?></span>
@@ -19,6 +19,9 @@
     </div>
 
     <main>
+    <div class="section-divider my-4" id="section-one">
+            <img src="assets/img/section-divider.svg" alt="">
+        </div>
         <section class="container my-3 ">
             <div class="std-card">
                 <h2 class="text-center">Contact Us</h2>

@@ -47,6 +47,7 @@
     top: 86px;
     left: 0;
     right: 0;
+    transform: translateX(100%);
     margin: 0;
     padding: 0;
     padding: $spacer-3;
@@ -65,7 +66,6 @@
         font-size: $fs-125;
         color: $primary;
         margin-block: $spacer-2;
-        opacity: 0;
         animation: navopen 300ms ease-in-out forwards;
         &:hover, &:focus{
             text-decoration: underline;
@@ -76,10 +76,8 @@
 
 .nav-links[data-state="opened"]{
     display: block;
-    a{
-        opacity: 1;
-        animation: navopen 1s ease-in-out forwards;
-    }
+    transform: translateX(0%);
+
     animation: navopen 400ms ease-in-out forwards;
 }
 
@@ -99,12 +97,12 @@
 }
 
 @keyframes navclose{
-    100%{opacity:0;}
-    0%{opacity:1; }
+    100%{opacity:0; transform: translateX(100%);}
+    0%{opacity:1; transform: translateX(0%); }
 }
 @keyframes navopen{
-    0%{opacity:0;}
-    100%{opacity:1;}
+    0%{opacity:0; transform: translateX(100%);}
+    100%{opacity:1; transform: translateX(0%);}
 }
 
 

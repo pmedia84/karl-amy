@@ -12,7 +12,7 @@ $story_result = $story->fetch_assoc();
     <div class="hero story-hero">
     <?php include("inc/nav.inc.php"); ?>
     <div class="hero-container">
-                <h1 class="hero-title text-center">We Are Getting Married!</h1>
+                <h1 class="hero-title text-center">How It All Began</h1>
                 <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
             <div class="hero-footer">
                 <span><?= $event_location; ?></span>
@@ -21,6 +21,9 @@ $story_result = $story->fetch_assoc();
         </div>
     </div>
     <main>
+    <div class="section-divider my-4" id="section-one">
+            <img src="assets/img/section-divider.svg" alt="">
+        </div>
         <section class="container my-7 ">
             <div class="std-card story">
                 <?php if ($story->num_rows > 0 && $story_result['story_status'] == "Published") :
