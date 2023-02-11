@@ -8,5 +8,6 @@
     </div>
     </div>
 </footer>
+<button class="return" onclick="scrolltotop()" ><i class="fa-solid fa-chevron-up"></i></button>
 
 <script src="./assets/js/app.js"></script>

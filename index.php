@@ -13,13 +13,8 @@ $gallery = $db->query($gallery_query);
         <?php include("inc/nav.inc.php"); ?>
 
         <div class="hero-container">
-
-            <div class="hero-title text-center ">
-                <h1>We Are Getting Married!</h1>
-            </div>
-            <div class="hero-img-card">
-                <img src="assets/img/hero/index-hero-card.jpg" alt="" height="">
-            </div>
+                <h1 class="hero-title text-center">We Are Getting Married!</h1>
+                <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
             <div class="hero-footer">
                 <span><?= $event_location; ?></span>
                 <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
@@ -28,7 +23,7 @@ $gallery = $db->query($gallery_query);
     </div>
 
     <main>
-        <div class="section-divider my-4">
+        <div class="section-divider my-4" id="section-one">
             <img src="assets/img/section-divider.svg" alt="">
         </div>
 
@@ -45,7 +40,7 @@ $gallery = $db->query($gallery_query);
                         </div>
                     </div>
                     <div class="center-card">
-                        <span class="left">Karl</span> <img src="assets/img/icons/rings.svg" alt=""><span class="right">Amy</span>
+                        <span class="left">Karl</span> <img src="assets/img/icons/rings.png" alt=""><span class="right">Amy</span>
                     </div>
                     <div class="profile-card">
                         <div class="profile-card-img">

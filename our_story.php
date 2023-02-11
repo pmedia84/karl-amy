@@ -11,13 +11,12 @@ $story_result = $story->fetch_assoc();
     
     <div class="hero story-hero">
     <?php include("inc/nav.inc.php"); ?>
-        <div class="hero-container">
-            <div class="hero-title text-center ">
-                <h1>Our Story</h1>
-
-            </div>
-            <div class="hero-img-card">
-                <img src="assets/img/hero/index-hero-card.jpg" alt="">
+    <div class="hero-container">
+                <h1 class="hero-title text-center">We Are Getting Married!</h1>
+                <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
+            <div class="hero-footer">
+                <span><?= $event_location; ?></span>
+                <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
             </div>
         </div>
     </div>

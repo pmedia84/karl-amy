@@ -13,14 +13,12 @@ $gift_list = $db->query('SELECT * FROM gift_list');
 
     <div class="hero gift-hero">
     <?php include("inc/nav.inc.php"); ?>
-        <div class="hero-container">
-            <div class="hero-title text-center ">
-                <h1>Our Gift List</h1>
-                <p><?= $wedding_name; ?></p>
-
-            </div>
-            <div class="hero-img-card">
-                <img src="assets/img/hero/index-hero-card.jpg" alt="">
+    <div class="hero-container">
+                <h1 class="hero-title text-center">Our Gift List</h1>
+                <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
+            <div class="hero-footer">
+                <span><?= $event_location; ?></span>
+                <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
             </div>
         </div>
     </div>

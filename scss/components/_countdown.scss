@@ -37,6 +37,7 @@
     border-top-left-radius:$border-radius-2;
     border-top-right-radius:$border-radius-2;
     border: 1px solid $primary;
+    border-bottom: 0px;
     height: 100%;
   }
   
@@ -49,7 +50,7 @@
     background-color: $primary;
     border-bottom-left-radius:$border-radius-2;
     border-bottom-right-radius:$border-radius-2;
-    border: 1px solid $primary;
+  
     height: 35px;
   }
   .countdown-subtitle {

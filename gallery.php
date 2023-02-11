@@ -11,16 +11,14 @@ $images = $db->query('SELECT * FROM images');
 
   <div class="hero gallery-hero">
   <?php include("inc/nav.inc.php"); ?>
-    <div class="hero-container">
-      <div class="hero-title text-center ">
-        <h1>Our Photo Gallery</h1>
-        <p><?= $wedding_name; ?></p>
-
-      </div>
-      <div class="hero-img-card">
-        <img src="assets/img/hero/gallery-hero.jpg" alt="">
-      </div>
-    </div>
+  <div class="hero-container">
+                <h1 class="hero-title text-center">Our Photo Gallery</h1>
+                <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
+            <div class="hero-footer">
+                <span><?= $event_location; ?></span>
+                <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
+            </div>
+        </div>
   </div>
 
   <main>
@@ -29,9 +27,9 @@ $images = $db->query('SELECT * FROM images');
         <?php $count = 1; ?>
         <?php foreach ($images as $image) : ?>
 
-          <div class="gallery-img">
-            <img src="assets/img/gallery/<?=$image['image_filename']; ?>" alt="" onclick="openModal();currentSlide(<?= $count; ?>)" class="hover-shadow">
-          </div>
+       
+            <img class="gallery-img" src="assets/img/gallery/<?=$image['image_filename']; ?>" alt="" onclick="openModal();currentSlide(<?= $count; ?>)" class="hover-shadow">
+      
 
         <?php $count++;
         endforeach; ?>

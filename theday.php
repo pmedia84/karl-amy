@@ -13,14 +13,12 @@ $events_day_result = $events->fetch_assoc();
     
     <div class="hero day-hero">
     <?php include("inc/nav.inc.php"); ?>
-        <div class="hero-container">
-            <div class="hero-title text-center ">
-                <h1>Our Big Day</h1>
-                <p><?= $wedding_date; ?></p>
-
-            </div>
-            <div class="hero-img-card">
-                <img src="assets/img/venue/mercure.jpg" alt="">
+    <div class="hero-container">
+                <h1 class="hero-title text-center">Our Big Day!</h1>
+                <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
+            <div class="hero-footer">
+                <span><?= $event_location; ?></span>
+                <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
             </div>
         </div>
     </div>
