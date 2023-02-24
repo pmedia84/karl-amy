@@ -1,9 +1,6 @@
 <?php
 //email settings for contact forms
 //Settings for all form scripts
-
-
-
 include("./email_settings.php");
 //load database for wedding information
     $wedding_query = ('SELECT wedding_name, wedding_date, wedding_time FROM wedding LIMIT 1');
@@ -38,9 +35,12 @@ $place_id = ""; //Found from google places api
 
 
 foreach ($modules as $module) {
-    //RSVP
+    //RSVP & guest area
     if ($module['wedding_module_name'] == "Guest Area") {
         $guest_area_status = $module['wedding_module_status'];
     }
-
+    //Add and remove guests
+    if ($module['wedding_module_name'] == "Add & Remove Guests") {
+        $guest_add_remove = $module['wedding_module_status'];
+    }
 }
