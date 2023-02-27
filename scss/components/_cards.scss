@@ -73,6 +73,7 @@
     }
 
 
+
 }
 
 .venue-text{
@@ -91,6 +92,12 @@
     gap: $spacer-3;
     @media(min-width: $md){
         grid-template-columns: 1fr 1fr;
+    }
+    h3{
+        font-family: $font-family-sans-serif;
+    }
+    p{
+        font-weight: 400;
     }
 }
 

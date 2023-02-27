@@ -1404,10 +1404,12 @@ input:checked + .slider:before {
     gap: 1.5rem;
 
 
+
 }
 @media(min-width:768px){
 .venue-card{
         grid-template-columns: 1fr 1fr
+
 
 
 }
@@ -1434,6 +1436,12 @@ input:checked + .slider:before {
 .day-card-body{
         grid-template-columns: 1fr 1fr
 }
+    }
+.day-card-body h3{
+        font-family: 'Glory', sans-serif;
+    }
+.day-card-body p{
+        font-weight: 400;
     }
 /*/gift list*/
 .gift-item-card{

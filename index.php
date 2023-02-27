@@ -52,7 +52,7 @@ $gallery = $db->query($gallery_query);
                         </div>
                     </div>
                 </div>
-                <div class="text-center"><a href="" class="btn-primary my-3 text-center">Read Our Story</a></div>
+                <div class="text-center"><a href="our_story" class="btn-primary my-3 text-center">Read Our Story</a></div>
             </div>
         </section>
         <section class="countdown-container">
@@ -103,7 +103,7 @@ $gallery = $db->query($gallery_query);
                         <h2>The Venue</h2>
                         <p class="venue-card-subtitle"><?= $event_location; ?></p>
                         <p class="venue-card-subtitle"><?= $event_address; ?></p>
-                        <p>Find out more about our big day <a href="">Here!</a></p>
+                        <p>Find out more about our big day <a href="theday">Here!</a></p>
                     </div>
                     <img src="assets/img/venue/venue.jpg" alt="">
 

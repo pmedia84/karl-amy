@@ -45,7 +45,7 @@ $events_day_result = $events->fetch_assoc();
                             <p><?= $event_time; ?></p>
                             <?php if ($event['event_notes']>""):?>
                                 <h3>Notes</h3>
-                                <p><?= $event['event_notes']; ?></p>
+                                <p><?= html_entity_decode($event['event_notes']);?></p>
                             <?php endif;?>    
                             
                             <h3>Let us know if you will be attending:</h3>
