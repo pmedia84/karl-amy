@@ -13,7 +13,8 @@ include("./email_settings.php");
     $wedding->fetch();
     $wedding->close();
     $cd_date = $wedding_date; //date variable for countdown timer
-    $cd_time = $wedding_time;
+    $cd_time = gmdate($wedding_time);
+    //date_default_timezone_set('Europe/London');
     $weddingdate = strtotime($wedding_date);
     $wedding_date = date('d m Y', $weddingdate);
     //load events

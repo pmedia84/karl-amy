@@ -26,6 +26,7 @@ function closenavLinks(){
 
 function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
+    //console.log(new Date());
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / (1000 * 60 * 60)) % 24);

@@ -2,6 +2,9 @@
 //fetch image gallery
 $gallery_query = ('SELECT * FROM images WHERE image_placement LIKE "%Home%" LIMIT  6 ');
 $gallery = $db->query($gallery_query);
+
+
+
  ?>
 <!-- All above this is for each page -->
 <title>The Wedding of <?= $wedding_name; ?></title>
@@ -16,7 +19,11 @@ $gallery = $db->query($gallery_query);
                 <h1 class="hero-title text-center">We Are Getting Married!</h1>
                 <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
             <div class="hero-footer">
+                <span><?= $event_location;?></span>
                 <span><?= $event_location; ?></span>
+                <span><?= $event_location;?></span>
+                <span><?= $event_location; ?></span>
+                <span><?= $event_location;?></span>
                 <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
             </div>
         </div>
@@ -140,6 +147,7 @@ $gallery = $db->query($gallery_query);
     </main>
     <?php include("inc/footer.inc.php"); ?>
     <script>
+        let now = "<?= gmdate('d/m/y');?>";
         const deadline = new Date(Date.parse(new Date('<?php echo $cd_date." ".$wedding_time; ?>')));
         initializeClock('clockdiv', deadline);
         
