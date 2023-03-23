@@ -1403,20 +1403,19 @@ input:checked + .slider:before {
     display: grid;
     gap: 1.5rem;
 
-
-
 }
 @media(min-width:768px){
 .venue-card{
         grid-template-columns: 1fr 1fr
-
-
 
 }
     }
 .venue-card h2{
         color: hsl(25, 100%, 40%);
     }
+.venue-card .venue-card-subtitle{
+    font-size: 1.25rem;
+}
 .venue-text{
     padding: 2rem;
 }
@@ -1491,10 +1490,11 @@ input:checked + .slider:before {
 
 }
 .profile-card-body h3{
-        font-weight: 300
+        font-weight: 300;
+        font-family: 'Glory', sans-serif;
     }
 .profile-card-body {
-    font-weight: 200;
+    font-weight: 300;
 }
 .center-card{
     display: flex;

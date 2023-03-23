@@ -37,7 +37,7 @@ $gallery = $db->query($gallery_query);
                         </div>
                         <div class="profile-card-body">
                             <h3>Karl</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores itaque sit corrupti molestiae praesentium aliquid porro eius iure ipsa natus?</p>
+                            <p>Loves all things tech! Used to live in Devon until he found Amy on a Facebook Group. And the rest is history as they say.</p>
                         </div>
                     </div>
                     <div class="center-card">
@@ -49,7 +49,7 @@ $gallery = $db->query($gallery_query);
                         </div>
                         <div class="profile-card-body">
                             <h3>Amy</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi consectetur repellendus temporibus nulla dolores hic sit provident? Esse, debitis non!</p>
+                            <p>Currently a Student Peadiatric Nurse, will be fully qualified in 2025. Loves watching Crocodiles in Florida!</p>
                         </div>
                     </div>
                 </div>
@@ -103,8 +103,11 @@ $gallery = $db->query($gallery_query);
                     <div class="venue-text">
                         <h2>The Venue</h2>
                         <p class="venue-card-subtitle"><?= $event_location; ?></p>
+                        <h2>Time</h2>
+                        <p class="venue-card-subtitle"><?php echo date('G:i a', strtotime($wedding_time));?></p>
+                        <h2>Address</h2>
                         <p class="venue-card-subtitle"><?= $event_address; ?></p>
-                        <p>Find out more about our big day <a href="theday">Here!</a></p>
+                        <p class="my-2">Find out more about our big day <a href="theday">Here!</a></p>
                     </div>
                     <img src="assets/img/venue/venue.jpg" alt="">
 

@@ -72,7 +72,9 @@
         color: $primary;
     }
 
-
+.venue-card-subtitle{
+    font-size: $fs-125;
+}
 
 }
 
@@ -150,9 +152,10 @@
 .profile-card-body{
     text-align: center;
     h3{
-        font-weight: 300
+        font-weight: 300;
+        font-family: $font-family-sans-serif;
     }
-    font-weight: 200
+    font-weight: 300
 
 }
 
