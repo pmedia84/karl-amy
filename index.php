@@ -20,20 +20,14 @@ $gallery = $db->query($gallery_query);
                 <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
             <div class="hero-footer">
                 <span><?= $event_location;?></span>
-                <span><?= $event_location; ?></span>
-                <span><?= $event_location;?></span>
-                <span><?= $event_location; ?></span>
-                <span><?= $event_location;?></span>
                 <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
             </div>
         </div>
     </div>
-
     <main>
         <div class="section-divider my-4" id="section-one">
             <img src="assets/img/section-divider.svg" alt="">
         </div>
-
         <section class="container my-4">
             <div class="std-card primary-950">
                 <div class="grid-row-3col">
