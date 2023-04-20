@@ -2,7 +2,7 @@
 <!-- All above this is for each page -->
 <?php
 //load all images
-$images = $db->query('SELECT * FROM images');
+$images = $db->query('SELECT * FROM images WHERE image_placement="Gallery" AND status ="Approved"');
 ?>
 <title>The Wedding of <?= $wedding_name; ?> | Our Photo Gallery</title>
 </head>
@@ -23,12 +23,12 @@ $images = $db->query('SELECT * FROM images');
 
   <main>
     <section class="container my-7">
-      <div class="gallery-grid grid-auto-sm">
+      <div class="gallery-grid grid-row-3col">
         <?php $count = 1; ?>
         <?php foreach ($images as $image) : ?>
 
        
-            <img class="gallery-img" src="assets/img/gallery/<?=$image['image_filename']; ?>" alt="" onclick="openModal();currentSlide(<?= $count; ?>)" class="hover-shadow">
+            <img class="gallery-img" src="../admin/assets/img/gallery/<?=$image['image_filename']; ?>" alt="" onclick="openModal();currentSlide(<?= $count; ?>)" class="hover-shadow">
       
 
         <?php $count++;
@@ -52,7 +52,7 @@ $images = $db->query('SELECT * FROM images');
             <div class="slide-body">
 
               <div class="slide-body-img">
-                <img src="assets/img/gallery/<?= $slides['image_filename']; ?>">
+                <img src="../admin/assets/img/gallery/<?= $slides['image_filename']; ?>">
               </div>
               <!-- Caption text -->
               <p class="slide-body-caption text-center"><?= $slides['image_description']; ?></p>
@@ -80,7 +80,7 @@ $images = $db->query('SELECT * FROM images');
         ?>
           <!-- Thumbnail image controls -->
 
-          <img class="demo" src="assets/img/gallery/<?= $image['image_filename']; ?>" onclick="currentSlide(<?= $thumb_count; ?>)">
+          <img class="demo" src="../admin/assets/img/gallery/<?= $image['image_filename']; ?>" onclick="currentSlide(<?= $thumb_count; ?>)">
 
 
         <?php $thumb_count++;
