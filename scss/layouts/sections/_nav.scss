@@ -1,50 +1,65 @@
 .nav-container {
     padding: 1rem 2rem;
     z-index: 100;
-    //position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(4px);
+    border-bottom: 2px solid transparent;
 }
 
-.nav-bar{ //inner nav bar
+.nav-bar {
+    //inner nav bar
     display: flex;
-   
+
     justify-content: space-between;
     align-items: center;
+    color: $primary;
 }
 
-.nav-brand{
+.nav-brand {
     font-size: $fs-200;
     font-weight: 400;
     font-family: $ff-handwriting;
     opacity: 1;
     transition: opacity 600ms ease;
-    a{
+
+    a {
         text-decoration: none;
-        color: $primary-950;
-        span{
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        transition: color 400ms ease-out;
+
+        span {
             font-size: 3rem;
             margin-inline: $spacer-2;
         }
     }
 }
 
-.nav-brand-sm{
+.nav-brand-sm {
     font-size: $fs-200;
     font-weight: 400;
     font-family: $ff-handwriting;
-    a{
+
+    a {
         text-decoration: none;
-        span{
+
+        span {
             font-size: 3rem;
             margin-inline: $spacer-2;
         }
     }
 }
+
 .nav-links {
     //nav bar links
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 86px;
+    top: $nav-height;
     left: 0;
     right: 0;
     margin: 0;
@@ -52,12 +67,14 @@
     padding: $spacer-3;
     background-color: $primary-900;
     border-bottom: 2px solid $primary;
+
     li {
         list-style-type: none;
-        
+
 
     }
-    a{
+
+    a {
         text-decoration: none;
         padding: $spacer-2;
         width: 100%;
@@ -66,14 +83,17 @@
         color: $primary;
         margin-block: $spacer-2;
         animation: navopen 300ms ease-in-out forwards;
-        &:hover, &:focus{
+
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }
 }
+
 //settings for active menu
 
-.nav-links[data-state="opened"]{
+.nav-links[data-state="opened"] {
     display: block;
     transform: translateX(0%);
 
@@ -82,8 +102,9 @@
 
 .nav-links[data-state="closing"] {
     animation: navclose 400ms ease-in-out forwards;
-   
+
 }
+
 .nav-links[data-state="closed"] {
     display: none;
 }
@@ -95,13 +116,24 @@
     outline-color: $primary-800;
 }
 
-@keyframes navclose{
-    100%{opacity:0;}
-    0%{opacity:1;}
+@keyframes navclose {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
+    }
 }
-@keyframes navopen{
-    0%{opacity:0; }
-    100%{opacity:1;}
+
+@keyframes navopen {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -116,7 +148,7 @@
 
     .hamburger {
         //svg
-        fill: $primary-900;
+        fill: $primary;
     }
 }
 
@@ -154,19 +186,52 @@
     opacity: 0;
 }
 
-/////////////Wider screen Settings
-@media(min-width:$x-lg){
-    .nav-bar{ //inner nav bar
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+//!mobile settings for nav bar on scroll
+.nav-container[data-nav="top"] {
+    background-color: transparent;
+    animation: nav-top 400ms ease-in forwards;
+    .nav-brand a {
+        color: $primary-950;
+        transition: color 400ms ease-in;
+
+    }
+}
+
+.nav-container[data-nav="scrolled"] {
+    animation: nav-scrolled 400ms ease-in forwards;
+    .nav-brand a {
+        color: $primary;
+        transition: color 400ms ease-in;
     }
 
-    .nav-btn{
-        display:none;
+
+}
+@keyframes nav-top{
+    0%{background-color: $primary-950;}
+    100%{background-color: transparent;}
+}
+@keyframes nav-scrolled{
+    0%{background-color: transparent;}
+    100%{background-color: $primary-950;}
+}
+///!
+//?Wider screen Settings
+@media(min-width:$x-lg) {
+
+    .nav-bar {
+        //inner nav bar
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
     }
-    .nav-links{
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -175,78 +240,41 @@
         position: static;
         top: 0;
         padding: $spacer-2;
-        background: rgba(255, 255, 255, 0.20);
-        backdrop-filter: blur(4px);
+        background: transparent;
         border: none;
         border-radius: $border-radius;
         border-bottom: 1px solid transparent;
-        a{
+
+        a {
             margin-block: 0;
-            color: $primary-900;
+
+            color: $primary-950;
+
         }
-      
+
     }
+
     .nav-links[data-state="closed"] {
         display: flex;
     }
-    .nav-container{
-        height: 150px;
+
+    .nav-container[data-nav="top"] {
+
+        .nav-links a {
+            color: $primary-950;
+            transition: color 400ms ease-out;
+        }
     }
-    
-.nav-links[data-nav="scrolled"]{
-    background-color: $primary-950;
-    position: fixed;
-    top: -63px;
-    width: 100%;
-    padding-inline: $spacer-4;
-    animation: nav-slide 400ms ease forwards;
-    border-radius: 0;
-    border-bottom: 1px solid $primary;
-   a{
-       color: $primary;
-   }
-}
-.nav-links[data-nav="closing"]{
-    width: 100%;
-    background-color: $primary-950;
-    position: fixed;
-    top: 0;
-    border-radius: 0;
-    padding-inline: $spacer-3;
-    animation: nav-closing 400ms ease forwards;
-    a{
-        color: $primary-900;
-        opacity: 0;
+
+    .nav-container[data-nav="scrolled"] {
+        .nav-links a {
+            color: $primary;
+            transition: color 400ms ease-out;
+
+        }
     }
 }
-.nav-links[data-nav="ready"]{
-    
-   
 
-    animation: nav-ready 400ms ease-out forwards;
-   a{
-       
-       opacity: 0;
-   }
-}
-}
-////Nav scrolled settings
-@media(min-width:$md){
 
-}
-//animate menu slide down
-@keyframes nav-slide{
-    0%{top:-63px;}
-    100%{top:0;}
-}
-//animate menu slide down
-@keyframes nav-closing{
-    0%{top:0; color:$primary;}
-    100%{top: -63px; color: $primary-900;}
-}
 
-//animate menu slide down
-@keyframes nav-ready{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
+

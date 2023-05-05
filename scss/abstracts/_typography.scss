@@ -1,49 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Glory:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap');
 $font-family-sans-serif: 'Glory', sans-serif;
 $ff-handwriting: 'Alex Brush', cursive;
-body{
+
+body {
     font-family: $font-family-sans-serif;
 }
 
-.font-emphasis{
+.font-emphasis {
     font-weight: 300;
     font-size: 1.25rem;
     color: $grey-600;
 }
 
-.text-alert{
+.text-alert {
     color: $error-response ;
 }
+
 $fs-100: 1rem;
 $fs-125: 1.25rem;
 $fs-150: 1.5rem;
 $fs-200: 2rem;
 $fs-250: 2.5rem;
 $fs-300: 3rem;
+$fs-350: 3.5rem;
 
-.cta-heading{
+.cta-heading {
     //bigger font for an alert or a large block of text
     font-size: $fs-200;
     color: $primary;
     font-weight: 300;
 }
 
-h1{
-    font-size:$fs-250 ;
-}
-h2{
-    font-size: $fs-200;
-}
-h1, h2, h3, h4{
-    font-family: $ff-handwriting;
+h1 {
+    font-size: $fs-350 ;
 }
 
-.section-title{
-    font-size: $fs-250;
-    color: $primary;
+h2 {
+    font-size: $fs-300;
+    font-weight: 200;
 }
 
-.section-subtitle{
+h3{
+    font-size: $fs-150;
+    font-weight: 300;
+}
+
+.section-subtitle {
     font-size: $fs-150;
     font-weight: 200;
 }

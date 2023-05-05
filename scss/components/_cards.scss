@@ -1,15 +1,14 @@
-
-
 //image card with glass border
-.img-card{
+.img-card {
     padding: 1rem;
     background-color: hsla(0, 0%, 96%, 0.509);
     backdrop-filter: blur(10px);
     border: 1px solid $primary;
 }
+
 //standard card with basic padding and a simple border
 
-.std-card{
+.std-card {
     padding: $spacer-3;
     border: 2px solid $primary;
     border-radius: $border-radius;
@@ -17,43 +16,80 @@
 
 //event card with header images and date information
 //set up as a section with a full width bg image
-.event-card-section{
+.event-card-section {
     background-image: url("../../assets/img/event-card/event-card-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-block: $spacer-4;
 }
-.event-card{
-   border: 2px solid $primary;
-   text-align: center;
-   padding: $spacer-3;
-   background-color: $primary-900;
-   border-radius: $border-radius;
-   h2{
-    font-size: $fs-200;
-    font-weight: 300;
-   }
-   p{
-    font-size: $fs-125;
-    font-weight: 100;
-   }
+
+.event-card {
+    border: 1px solid $primary;
+
+    padding: $spacer-3;
+    background-color: $primary-950;
+    border-radius: $border-radius;
+
+    img {
+        border-radius: $border-radius-2;
+    }
+
+    p {
+        font-weight: 300;
+    }
+
 }
 
-.event-card-images{
+.event-card-title {
+    font-size: $fs-200;
+    font-weight: 300;
+}
+
+.event-time,
+.event-location {
+    font-size: $fs-150;
+}
+
+.event-rsvp {
+    margin-top: $spacer-3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $primary-900;
+    padding: $spacer-3;
+    border-radius: $border-radius-2;
+}
+
+.event-card-body {
+    display: grid;
+    gap: $spacer-3;
+}
+
+@media(min-width:$md) {
+    .event-card-body {
+        grid-template-columns: 50% auto;
+    }
+}
+
+.event-card-images {
     display: flex;
     flex-direction: column;
     gap: $spacer-2;
     margin-bottom: $spacer-5;
-    @media(min-width:$md){
+
+    @media(min-width:$md) {
         flex-direction: row;
         justify-content: center;
         gap: $spacer-3;
     }
-    .img-card{
+
+    .img-card {
         max-height: 500px;
         max-width: 500px;
-        img{
+
+        img {
             height: 100%;
             width: 100%;
             object-fit: cover;
@@ -61,70 +97,60 @@
     }
 }
 
-.venue-card{
+.venue-card {
     padding-block: $spacer-7;
     display: grid;
     gap: $spacer-3;
-    @media(min-width:$md){
+
+    @media(min-width:$md) {
         grid-template-columns: 1fr 1fr;
     }
-    h2{
+
+    h2 {
         color: $primary;
     }
 
-.venue-card-subtitle{
-    font-size: $fs-125;
-}
+    .venue-card-subtitle {
+        font-size: $fs-125;
+    }
 
 }
 
-.venue-text{
+.venue-text {
     padding: $spacer-4;
 }
-.footer-img-card{
+
+.footer-img-card {
     width: 100%;
     object-fit: cover;
     height: 50vh;
 }
-.day-card{
-    text-align: left;
-}
-.day-card-body{
-    display: grid;
-    gap: $spacer-3;
-    @media(min-width: $md){
-        grid-template-columns: 1fr 1fr;
-    }
-    h3{
-        font-family: $font-family-sans-serif;
-    }
-    p{
-        font-weight: 400;
-    }
-}
+
+
 
 
 ///gift list
-.gift-item-card{
+.gift-item-card {
     padding: $spacer-3;
     border: 2px solid $primary;
     display: grid;
     gap: $spacer-2;
     max-width: 600px;
-    
-    @media(min-width:$md){
+
+    @media(min-width:$md) {
         grid-template-columns: auto 250px;
-        
+
     }
 }
 
 //short intro card to the couples story
-.story-intro{
+.story-intro {
     max-height: 25ch;
     overflow: hidden;
 }
-@supports(-webkit-line-clamp: 5){
-    .story-intro{
+
+@supports(-webkit-line-clamp: 5) {
+    .story-intro {
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 5;
@@ -135,54 +161,58 @@
 }
 
 ///profile cards ith a decorative border and center card
-.profile-card{
+.profile-card {
     padding: $spacer-2;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: $spacer-2;
 }
-.profile-card-img img{
+
+.profile-card-img img {
     height: 200px;
     width: 200px;
     object-fit: cover;
     border-radius: 100%;
 }
 
-.profile-card-body{
+.profile-card-body {
     text-align: center;
-    h3{
+    h3 {
         font-weight: 300;
         font-family: $font-family-sans-serif;
     }
-    font-weight: 300
 
+    font-weight: 300;
 }
 
-.center-card{
+.center-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     place-self: center;
-    height: 80%;
 
-    img{
+    img {
         opacity: .8;
     }
 
 }
-.left, .right{
+
+.left,
+.right {
     font-family: $ff-handwriting;
     color: $primary;
     font-size: $fs-300;
-    
+
 }
-@media(min-width: $md){
-    .left{
+
+@media(min-width: $md) {
+    .left {
         align-self: start;
     }
-    .right{
+
+    .right {
         align-self: end;
     }
 }

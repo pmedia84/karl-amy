@@ -3,6 +3,21 @@
 }
 
 .gift-hero{
-    background-image: url("../../assets/img/hero/index-hero.jpg");
+    background-image: url("../../assets/img/hero/gift-hero-sm.webp");
     color: $primary-950;
 }
+@media(min-width:$md){
+    .gift-hero{
+        background-image: url("../../assets/img/hero/gift-hero-md.webp");
+    }
+  }
+  @media(min-width:$lg){
+    .gift-hero{
+        background-image: url("../../assets/img/hero/gift-hero-lg.webp");
+    }
+  }
+  @media(min-width:$x-lg){
+    .gift-hero{
+        background-image: url("../../assets/img/hero/gift-hero-xlg.webp");
+    }
+  }

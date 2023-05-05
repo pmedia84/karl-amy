@@ -4,22 +4,27 @@
 </head>
 
 <body>
-   
+
     <div class="hero contact-hero">
-    <?php include("inc/nav.inc.php"); ?>
-    <div class="hero-container">
-                <h1 class="hero-title text-center">Get In Touch</h1>
-                <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
-            <div class="hero-footer">
-                <span><?= $event_location; ?></span>
-                <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
+        <?php include("inc/nav.inc.php"); ?>
+        <div class="hero-container text-center">
+            <h1 class="hero-title text-center">Get In Touch With Us</h1>
+            <p>Got a question about our big day, or just want to drop us a line?</p>
+            <div class="gallery-card">
+                <div class="gallery-card-img">
+                    <img src="assets/img/hero/contact-hero-card.webp" height="250px" alt="">
+                </div>
+                <div class="gallery-card-footer">
+                    <p>First Night Out</p>
+                </div>
             </div>
+            <p><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
         </div>
     </div>
     </div>
 
     <main>
-    <div class="section-divider my-4" id="section-one">
+        <div class="section-divider my-4" id="section-one">
             <img src="assets/img/section-divider.svg" alt="">
         </div>
         <section class="container my-3 ">
@@ -50,10 +55,10 @@
 
                     </div>
                     <div class="google-policy">
-                            <p>Our website is protected by reCAPTCHA and the Google</p>
-                            <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
-                            <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
-                        </div>
+                        <p>Our website is protected by reCAPTCHA and the Google</p>
+                        <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
+                        <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+                    </div>
                     <div class="button-section my-3">
                         <button class="btn-primary form-controls-btn loading-btn" type="submit">Send Message<img id="loading-icon" class="loading-icon d-none" src="./assets/img/icons/loading.svg" alt=""></button>
                     </div>
@@ -75,9 +80,6 @@
 
 </body>
 <script>
-
-
-
     $('#contact').submit(function(event) {
         event.preventDefault(); //prevent form default submit
         //bring in recaptcha scripts and request token
@@ -86,7 +88,7 @@
                 action: 'submit'
             }).then(function(token) {
                 var formData = new FormData($("#contact").get(0));
-                formData.append("token", token);//append the recaptcha token
+                formData.append("token", token); //append the recaptcha token
                 $.ajax({ //start ajax post
                     type: "POST",
                     url: "scripts/contact.script.php",

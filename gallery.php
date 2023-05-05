@@ -10,15 +10,20 @@ $images = $db->query('SELECT * FROM images WHERE image_placement="Gallery" AND s
 <body>
 
   <div class="hero gallery-hero">
-  <?php include("inc/nav.inc.php"); ?>
-  <div class="hero-container">
-                <h1 class="hero-title text-center">Our Photo Gallery</h1>
-                <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
-            <div class="hero-footer">
-                <span><?= $event_location; ?></span>
-                <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
-            </div>
+    <?php include("inc/nav.inc.php"); ?>
+    <div class="hero-container text-center">
+      <h1 class="hero-title">Our Photo Gallery</h1>
+      <div class="gallery-card">
+        <div class="gallery-card-img">
+          <img src="assets/img/hero/gallery-hero-card.webp" height="250px" alt="">
         </div>
+        <div class="gallery-card-footer">
+          <p>Our First Selfie</p>
+        </div>
+      </div>
+
+      <p><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
+    </div>
   </div>
 
   <main>
@@ -27,9 +32,9 @@ $images = $db->query('SELECT * FROM images WHERE image_placement="Gallery" AND s
         <?php $count = 1; ?>
         <?php foreach ($images as $image) : ?>
 
-       
-            <img class="gallery-img" src="../admin/assets/img/gallery/<?=$image['image_filename']; ?>" alt="" onclick="openModal();currentSlide(<?= $count; ?>)" class="hover-shadow">
-      
+
+          <img class="gallery-img" src="../admin/assets/img/gallery/<?= $image['image_filename']; ?>" alt="" onclick="openModal();currentSlide(<?= $count; ?>)" class="hover-shadow">
+
 
         <?php $count++;
         endforeach; ?>

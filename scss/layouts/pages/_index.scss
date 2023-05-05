@@ -4,5 +4,16 @@
  
     border-radius: 5px;
    }
+}
 
+.index-hero{
+   .nav-brand{
+      color: $primary-950;
+   }
+   .gallery-card{
+      border-color: black;
+   }
+   .gallery-card-footer{
+      color: black;
+   }
 }

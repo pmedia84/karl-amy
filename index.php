@@ -1,11 +1,11 @@
 <?php include("inc/header.inc.php");
 //fetch image gallery
-$gallery_query = ('SELECT * FROM images WHERE image_placement LIKE "%Home%" LIMIT  6 ');
+$gallery_query = ('SELECT * FROM images  LIMIT  6 ');
 $gallery = $db->query($gallery_query);
 
 
 
- ?>
+?>
 <!-- All above this is for each page -->
 <title>The Wedding of <?= $wedding_name; ?></title>
 </head>
@@ -14,14 +14,18 @@ $gallery = $db->query($gallery_query);
 
     <div class="hero index-hero">
         <?php include("inc/nav.inc.php"); ?>
-
-        <div class="hero-container">
-                <h1 class="hero-title text-center">We Are Getting Married!</h1>
-                <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
-            <div class="hero-footer">
-                <span><?= $event_location;?></span>
-                <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
+        <div class="hero-container  text-center">
+            <h1 class="hero-title">We Are Getting Married!</h1>
+            <div class="gallery-card">
+                <div class="gallery-card-img">
+                    <img src="assets/img/hero/index-hero-card.webp" height="250px" alt="">
+                </div>
+                <div class="gallery-card-footer">
+                    <p>Engagement Day!</p>
+                </div>
             </div>
+            <p><?= $event_location; ?></p>
+            <p><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
         </div>
     </div>
     <main>
@@ -53,7 +57,6 @@ $gallery = $db->query($gallery_query);
                         </div>
                     </div>
                 </div>
-                <div class="text-center"><a href="our_story" class="btn-primary my-3 text-center">Read Our Story</a></div>
             </div>
         </section>
         <section class="countdown-container">
@@ -96,58 +99,57 @@ $gallery = $db->query($gallery_query);
         <div class="my-7 section-divider">
             <img src="assets/img/section-divider.svg" alt="">
         </div>
-        <section class="primary-900 my-7">
+        <section class="my-7">
             <div class="container">
-                <div class="venue-card">
-
-                    <div class="venue-text">
-                        <h2>The Venue</h2>
-                        <p class="venue-card-subtitle"><?= $event_location; ?></p>
-                        <h2>Time</h2>
-                        <p class="venue-card-subtitle"><?php echo date('G:i a', strtotime($wedding_time));?></p>
-                        <h2>Address</h2>
-                        <p class="venue-card-subtitle"><?= $event_address; ?></p>
-                        <p class="my-2">Find out more about our big day <a href="theday">Here!</a></p>
+                <div class="event-card">
+                    <div class="event-card-body">
+                        <div class="event-card-col">
+                            <h3 class="event-card-title">The Venue</h3>
+                            <p class="event-location">The Sessions House, Spalding</p>
+                            <p>We are saying "I Do" in the amazing Sessions House in Spalding, we fell in love with this venue the moment we set eyes on it and we knew it had to be where we got married.</p>
+                            <p>The venue is a court house that has been re developed into an incredible venue for weddings and other functions. It has an incredible character that we love and we are sure you will too.</p>
+                            <br>
+                            <p>We can't wait to see you there!</p>
+                        </div>
+                        <img src="assets/img/venue/sessions-house-2.webp" alt="">
                     </div>
-                    <img src="assets/img/venue/venue.jpg" alt="">
-
+                    <div class="event-rsvp">
+                        <h3>Find Out More</h3>
+                        <p>You can find out more about or big day here.</p>
+                        <a href="/guests/rsvp" class="btn-primary my-2">Find Out More</a>
+                    </div>
                 </div>
             </div>
         </section>
-<?php if($gallery->num_rows>0):?>
-    <section class="container">
-            <h2 class="section-title text-center">Gallery</h2>
-            <p class="section-subtitle text-center mb-3">Just a few of our favorite pics!</p>
-            <div class="std-card gallery primary-950">
-                <div class="gallery-body">
-                <?php foreach($gallery as $gallery_item):?>
-                    <div class="gallery-card">
-                    <div class="peg"></div>
-                        <div class="gallery-card-img">
-                            <img src="assets/img/gallery/<?=$gallery_item['image_filename'];?>" height="250px" alt="">
-                        </div>
-                        <div class="gallery-card-footer">
-                            <p><?=$gallery_item['image_description'];?></p>
-                        </div>
+        <?php if ($gallery->num_rows > 0) : ?>
+            <section class="container">
+                <h2 class="section-title text-center">Gallery</h2>
+                <p class="section-subtitle text-center mb-3">Just a few of our favorite pics!</p>
+                <div class="std-card gallery primary-950">
+                    <div class="gallery-body">
+                        <?php foreach ($gallery as $gallery_item) : ?>
+                            <div class="gallery-card">
+                                <div class="peg"></div>
+                                <div class="gallery-card-img">
+                                    <img src="../admin/assets/img/gallery/<?= $gallery_item['image_filename']; ?>" height="250px" alt="">
+                                </div>
+                                <div class="gallery-card-footer">
+                                    <p><?= $gallery_item['image_description']; ?></p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                    <?php endforeach;?>
                 </div>
-            </div>
-        </section>
-    
-    
-    
-    
-    <?php endif;?>
-        
+            </section>
+        <?php endif; ?>
+
         <h2 class="text-center my-7 cta-heading">We Can't Wait To See You!</h2>
     </main>
     <?php include("inc/footer.inc.php"); ?>
     <script>
-        let now = "<?= gmdate('d/m/y');?>";
-        const deadline = new Date(Date.parse(new Date('<?php echo $cd_date." ".$wedding_time; ?>')));
+        let now = "<?= gmdate('d/m/y'); ?>";
+        const deadline = new Date(Date.parse(new Date('<?php echo $cd_date . " " . $wedding_time; ?>')));
         initializeClock('clockdiv', deadline);
-        
     </script>
 </body>
 

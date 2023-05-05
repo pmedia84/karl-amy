@@ -4,61 +4,68 @@
 $events_day = $db->query('SELECT * FROM wedding_events ORDER BY event_time ');
 $events_day_result = $events->fetch_assoc();
 
-
 ?>
 <title>The Wedding of <?= $wedding_name; ?> | Our Story</title>
 </head>
 
 <body>
-    
+
     <div class="hero day-hero">
-    <?php include("inc/nav.inc.php"); ?>
-    <div class="hero-container">
-                <h1 class="hero-title text-center">Our Big Day!</h1>
-                <img class="hero-card-img" src="assets/img/hero/index-hero-card.jpg" alt="" height="">
-            <div class="hero-footer">
-                <span><?= $event_location; ?></span>
-                <span><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></span>
+        <?php include("inc/nav.inc.php"); ?>
+        <div class="hero-container text-center">
+            <h1 class="hero-title ">Our Big Day!</h1>
+            <div class="gallery-card">
+
+                <div class="gallery-card-img">
+                    <img src="assets/img/venue/sessions-house-2.webp" height="250px" alt="">
+                </div>
+                <div class="gallery-card-footer">
+                    <p>The Sessions House</p>
+                </div>
             </div>
+
         </div>
     </div>
 
     <main>
-    <div class="section-divider my-4" id="section-one">
-            <img src="assets/img/section-divider.svg" alt="">
-        </div>
-        <section class="container my-7 ">
-
-            <?php foreach ($events_day as $event) : 
-                $time =strtotime($event['event_time']);
-                $event_time = date('g:i A',$time);
-                ?>
-                    
-                <div class="my-3 event-card day-card">
-                <h2 class="text-center my-3"><?= $event_time.' '. $event['event_name']; ?></h2>
-                    <div class="day-card-body">
-                        <div class="day-card-col">
-                            <h3>Location</h3>
-                            <p><?= $event['event_location']; ?></p>
-                            <address><?= $event['event_address']; ?></address>
-                            <h3>Time</h3>
-                            <p><?= $event_time; ?></p>
-                            <?php if ($event['event_notes']>""):?>
-                                <h3>Notes</h3>
-                                <p><?= html_entity_decode($event['event_notes']);?></p>
-                            <?php endif;?>    
+        <section class="container my-3 " id="sectionone">
+        <h2 class="text-center">Our Big Day</h2>
+        <p class="section-subtitle text-center"><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
+            <?php foreach ($events_day as $event) :
+                $time = strtotime($event['event_time']);
+                $event_time = date('g:i A', $time);
+            ?>
+                <div class="my-3 event-card">
+                    <div class="event-card-body">
+                        <div class="event-card-col">
+                            <h3 class="event-card-title"><?=$event['event_name']; ?></h3>
                             
-                            <h3>Let us know if you will be attending:</h3>
-                                <a href="/guests/rsvp" class="btn-primary my-3">RSVP </a>
+                            <p class="event-time">Begins at <?= $event_time; ?></p>
+                            <p class="event-location"><strong><?= $event['event_location']; ?></strong></p>
+                            
+                            <?php if ($event['event_notes'] > "") : ?>
+                                <h3>Notes</h3>
+                                <p><?= html_entity_decode($event['event_notes']); ?></p>
+                            <?php endif; ?>
+
                         </div>
-                        <div class="day-card-col">
-                        <?php echo '<iframe frameborder="0" width="100%" height="250px" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=' . str_replace(",", "", str_replace(" ", "+", $event['event_address'])) . '&z=14&output=embed"></iframe>'; ?>
-                        </div>
+                        <img src="assets/img/venue/sessions-house-2.webp" alt="">
                     </div>
+                    <h3>Getting There:</h3>
+                    <p class="event-address" ><?= $event['event_address']; ?></p>
+                    <div class="event-card-map">
+                        <?php echo '<iframe frameborder="0" width="100%" height="350px" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=' . str_replace(",", "", str_replace(" ", "+", $event['event_address'])) . '&z=14&output=embed"></iframe>'; ?>
+                        </div>
+                        <div class="event-rsvp">
+                            <h3>RSVP</h3>
+                            <p>We would love to see you, please let us know if you will be attending</p>
+                            <a href="/guests/rsvp" class="btn-primary my-2">RSVP</a>
+                        </div>
+
 
                 </div>
                 <div class="my-7 section-divider">
-                    <img src="assets/img/flowers.svg" alt="">
+                    <img src="assets/img/section-divider.svg" alt="">
                 </div>
             <?php endforeach; ?>
 

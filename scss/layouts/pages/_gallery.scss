@@ -1,8 +1,22 @@
 .gallery-hero{
-  background-image: url("../../assets/img/hero/index-hero.jpg");
+  background-image: url("../../assets/img/hero/gallery-hero-sm.webp");
 
 }
-  
+@media(min-width:$md){
+  .gallery-hero{
+      background-image: url("../../assets/img/hero/gallery-hero-md.webp");
+  }
+}
+@media(min-width:$lg){
+  .gallery-hero{
+      background-image: url("../../assets/img/hero/gallery-hero-lg.webp");
+  }
+}
+@media(min-width:$x-lg){
+  .gallery-hero{
+      background-image: url("../../assets/img/hero/gallery-hero-xlg.webp");
+  }
+}
 ///thumbnails
 .thumbnails{
   width: auto;

@@ -64,7 +64,7 @@ function initializeClock(id, endtime) {
 
 
 window.onscroll = function() {navslide()};
-var navbar = document.querySelector(".nav-links");
+var navbar = document.querySelector(".nav-container");
 
 var sticky = navbar.offsetTop;
 var returnbtn = document.querySelector(".return");
@@ -75,11 +75,8 @@ function navslide(){
         navbar.setAttribute('data-nav', "scrolled");
     }
     if(window.scrollY<=0){
-        navbar.setAttribute('data-nav', "closing");
-        navbar.addEventListener('animationend', ()=> {
-            navbar.setAttribute('data-nav', "ready");
-             
-        }, {once:true})
+        navbar.setAttribute('data-nav', "top");
+
     }
     if(window.scrollY>= position){
         $(".return").addClass("return-active");
@@ -89,19 +86,7 @@ function navslide(){
 
 }
 
-// window.onscroll = function() {returntop()};
-// var returnbtn = document.querySelector(".return");
-// var sectionone = document.getElementById("section-one");
-// var position = sectionone.offsetTop;
-// function returntop(){
-    
-//     if(window.scrollY>= position){
-//         console.log("hi");
-//         $(".return").addClass("return-active");
-//     }else{
-//         $(".return").removeClass("return-active");
-//     }
-// }
+
 
 // When the user clicks on the button, scroll to the top of the document
 function scrolltotop() {

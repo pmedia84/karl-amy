@@ -1,4 +1,19 @@
 .contact-hero{
-    background-image: url("../../assets/img/hero/index-hero.jpg");
+    background-image: url("../../assets/img/hero/contact-hero-sm.webp");
  color: $primary-950;
+  }
+  @media(min-width:$md){
+    .contact-hero{
+        background-image: url("../../assets/img/hero/contact-hero-md.webp");
+    }
+  }
+  @media(min-width:$lg){
+    .contact-hero{
+        background-image: url("../../assets/img/hero/contact-hero-lg.webp");
+    }
+  }
+  @media(min-width:$x-lg){
+    .contact-hero{
+        background-image: url("../../assets/img/hero/contact-hero-xlg.webp");
+    }
   }
