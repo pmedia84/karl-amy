@@ -41,7 +41,7 @@ $gallery = $db->query($gallery_query);
                         </div>
                         <div class="profile-card-body">
                             <h3>Karl</h3>
-                            <p>Finally following his career goal of web development with his own business <a href="https://www.parrotmedia.co.uk" target="_blank">(Parrot Media)</a></p>
+                            <p>Finally following his career goal of web development with his own business <a href="https://www.parrotmedia.co.uk" target="_blank">(Parrot Media)</a> And an amazing dad to our 11 children.</p>
                         </div>
                     </div>
                     <div class="center-card">
@@ -116,7 +116,7 @@ $gallery = $db->query($gallery_query);
                     <div class="event-rsvp">
                         <h3>Find Out More</h3>
                         <p>You can find out more about or big day here.</p>
-                        <a href="/guests/rsvp" class="btn-primary my-2">Find Out More</a>
+                        <a href="theday" class="btn-primary my-2">Find Out More</a>
                     </div>
                 </div>
             </div>
