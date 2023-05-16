@@ -37,11 +37,11 @@ $gallery = $db->query($gallery_query);
                 <div class="grid-row-3col">
                     <div class="profile-card">
                         <div class="profile-card-img">
-                            <img src="assets/img/profiles/karl.jpg" height="250px" alt="">
+                            <img src="assets/img/profiles/karl.webp" height="250px" alt="">
                         </div>
                         <div class="profile-card-body">
                             <h3>Karl</h3>
-                            <p>Loves all things tech! Used to live in Devon until he found Amy on a Facebook Group. And the rest is history as they say.</p>
+                            <p>Finally following his career goal of web development with his own business <a href="https://www.parrotmedia.co.uk" target="_blank">(Parrot Media)</a></p>
                         </div>
                     </div>
                     <div class="center-card">
@@ -49,11 +49,11 @@ $gallery = $db->query($gallery_query);
                     </div>
                     <div class="profile-card">
                         <div class="profile-card-img">
-                            <img src="assets/img/profiles/amy.jpg" height="250px" alt="">
+                            <img src="assets/img/profiles/amy.webp" height="250px" alt="">
                         </div>
                         <div class="profile-card-body">
                             <h3>Amy</h3>
-                            <p>Currently a Student Peadiatric Nurse, will be fully qualified in 2025. Loves watching Crocodiles in Florida!</p>
+                            <p>Studying paediatric nursing and will be fully qualified in 2025, she is also an amazing mother to our 11 children.</p>
                         </div>
                     </div>
                 </div>
