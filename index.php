@@ -123,7 +123,8 @@ $gallery = $db->query($gallery_query);
         <?php if ($gallery->num_rows > 0) : ?>
             <section class="container">
                 <h2 class="section-title text-center">Gallery</h2>
-                <p class="section-subtitle text-center mb-3">Just a few of our favorite pics!</p>
+                <p class="section-subtitle text-center my-2">Just a few of our favorite pics!</p>
+                <p class="text-center section-subtitle my-2">You can see our full gallery <a href="gallery">Here</a></p>
                 <div class="std-card gallery primary-950">
                     <div class="gallery-body">
                         <?php foreach ($gallery as $gallery_item) : ?>
