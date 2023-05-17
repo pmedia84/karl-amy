@@ -44,7 +44,7 @@ $events_day_result = $events->fetch_assoc();
                             <p class="event-location"><strong><?= $event['event_location']; ?></strong></p>
                             
                             <?php if ($event['event_notes'] > "") : ?>
-                                <h3>Notes</h3>
+                                
                                 <p><?= html_entity_decode($event['event_notes']); ?></p>
                             <?php endif; ?>
 

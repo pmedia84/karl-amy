@@ -1,9 +1,7 @@
 <?php include("inc/header.inc.php");
 //fetch image gallery
-$gallery_query = ('SELECT * FROM images  LIMIT  6 ');
+$gallery_query = ('SELECT * FROM images  LIMIT  4 ');
 $gallery = $db->query($gallery_query);
-
-
 
 ?>
 <!-- All above this is for each page -->
@@ -106,10 +104,11 @@ $gallery = $db->query($gallery_query);
                         <div class="event-card-col">
                             <h3 class="event-card-title">The Venue</h3>
                             <p class="event-location">The Sessions House, Spalding</p>
-                            <p>We are saying "I Do" in the amazing Sessions House in Spalding, we fell in love with this venue the moment we set eyes on it and we knew it had to be where we got married.</p>
-                            <p>The venue is a court house that has been re developed into an incredible venue for weddings and other functions. It has an incredible character that we love and we are sure you will too.</p>
+                            <p>We are saying "I Do" at The Sessions House in Spalding. It is an amazing venue which we fell in love with and we knew it would be the perfect venue the moment we went to view it.</p>
                             <br>
-                            <p>We can't wait to see you there!</p>
+                            <p>Our dream venue is Spalding old magistrates court, the owners have worked hard to keep a lot of original features alongside being able to turn it into a venue for all different events including our wedding. The character featured in this venue is incredible, it is very quirky and out of this world.</p>
+                            <br>
+                            <p>We hope that when you join us in celebrating our special day you too, will agree with us.</p>
                         </div>
                         <img src="assets/img/venue/sessions-house-2.webp" alt="">
                     </div>

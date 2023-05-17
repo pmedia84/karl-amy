@@ -26,19 +26,15 @@ $gift_list = $db->query('SELECT * FROM gift_list');
             <p><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
         </div>
     </div>
-
     <main>
         <section class="container">
             <h2 class="text-center my-3">Our gift ideas</h2>
-
-
             <?php if ($gift_list->num_rows > 0) : ?>
                 <?php foreach ($gift_list as $gift_item) :
                     $gift_item_desc = html_entity_decode($gift_item['gift_item_desc']);
                 ?>
                     <?php if ($gift_item['gift_item_type'] == "message") : ?>
                         <div class="std-card my-3">
-
                             <p><?= $gift_item_desc; ?></p>
                         </div>
                     <?php else : ?>
@@ -47,23 +43,12 @@ $gift_list = $db->query('SELECT * FROM gift_list');
                             <p><?= $gift_item['gift_item_desc']; ?></p>
                         </div>
                     <?php endif; ?>
-
-
-
-
-
                 <?php endforeach; ?>
             <?php endif; ?>
-
-
         </section>
-
-
         <div class="my-7 section-divider">
-            <img src="assets/img/flowers.svg" alt="">
+            <img src="assets/img/section-divider.svg" alt="">
         </div>
-
-
 
     </main>
     <?php include("inc/footer.inc.php"); ?>
