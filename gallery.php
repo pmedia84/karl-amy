@@ -27,14 +27,13 @@ $images = $db->query('SELECT * FROM images WHERE image_placement="Gallery" AND s
   </div>
 
   <main>
-    <section class="container my-7">
+    <section class="container my-3">
+      <h2 class="text-center mt-3">Some of our favorite memories.</h2>
+      <p class="text-center section-subtitle mb-3">Click on any image to view a slideshow</p>
       <div class="gallery-grid grid-row-3col">
         <?php $count = 1; ?>
         <?php foreach ($images as $image) : ?>
-
-
           <img class="gallery-img" src="../admin/assets/img/gallery/<?= $image['image_filename']; ?>" alt="" onclick="openModal();currentSlide(<?= $count; ?>)" class="hover-shadow">
-
 
         <?php $count++;
         endforeach; ?>
