@@ -33,15 +33,20 @@ $events_day_result = $events->fetch_assoc();
             <p class="section-subtitle text-center"><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
             <?php foreach ($events_day as $event) :
                 $time = strtotime($event['event_time']);
+                $end_time = strtotime($event['event_end']);
                 $event_time = date('g:i A', $time);
+                $event_end_time = date('g:i A', $end_time);
+                if($event_end_time == "12:00 AM"){
+                    $event_end_time="Midnight";
+                }
             ?>
                 <div class="my-3 event-card">
                     <div class="event-card-body">
                         <div class="event-card-col">
                             <h3 class="event-card-title"><?= $event['event_name']; ?></h3>
 
-                            <p class="event-time">Begins at <?= $event_time; ?></p>
-                            <p class="event-location"><strong><?= $event['event_location']; ?></strong></p>
+                            <p class="event-time"><?= $event_time; ?> Till <?=$event_end_time;?></p>
+                            <p class="event-location"><strong><?= $event['event_location']; ?>, <?=$event['event_postcode'];?></strong></p>
 
                             <?php if ($event['event_notes'] > "") : ?>
 
@@ -83,9 +88,7 @@ $events_day_result = $events->fetch_assoc();
                                 <p><a href="https://www.cleyhall.com/">www.cleyhall.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
 
                                 <h5>Address</h5>
-                                <p>
-                                22 High Street, Spalding, Lincolnshire, PE11 1TX
-                                </p>
+                                <p> 22 High Street, Spalding, Lincolnshire, PE11 1TX</p>
                                 <h5>Phone No.</h5>
                                 <p><a href="tel:01775 725157">01775 725157</a></p>
                             </li>
@@ -97,13 +100,9 @@ $events_day_result = $events->fetch_assoc();
                         <ul role="list">
                             <li class="event-card-sub-card">
                                 <h4>Spalding Taxis</h4>
-                                <h5>Website</h5>
-                                <p><a href="https://www.spaldingtaxis.com/" target="_blank">www.spaldingtaxis.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
-                                <h5>Address</h5>
-                                <p>13 Kellett Gate, Low Fulney, Spalding, PE12 6EH</p>
                                 <h5>Phone No.</h5>
                                 <p><a href="tel:01775 722 115">01775 722 115</a></p>
-                        </li>
+                            </li>
                         </ul>
                     </div>
 
