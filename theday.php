@@ -36,8 +36,8 @@ $events_day_result = $events->fetch_assoc();
                 $end_time = strtotime($event['event_end']);
                 $event_time = date('g:i A', $time);
                 $event_end_time = date('g:i A', $end_time);
-                if($event_end_time == "12:00 AM"){
-                    $event_end_time="Midnight";
+                if ($event_end_time == "12:00 AM") {
+                    $event_end_time = "Midnight";
                 }
             ?>
                 <div class="my-3 event-card">
@@ -45,8 +45,8 @@ $events_day_result = $events->fetch_assoc();
                         <div class="event-card-col">
                             <h3 class="event-card-title"><?= $event['event_name']; ?></h3>
 
-                            <p class="event-time"><?= $event_time; ?> Till <?=$event_end_time;?></p>
-                            <p class="event-location"><strong><?= $event['event_location']; ?>, <?=$event['event_postcode'];?></strong></p>
+                            <p class="event-time"><?= $event_time; ?> Till <?= $event_end_time; ?></p>
+                            <p class="event-location"><strong><?= $event['event_location']; ?>, <?= $event['event_postcode']; ?></strong></p>
 
                             <?php if ($event['event_notes'] > "") : ?>
 
@@ -74,7 +74,7 @@ $events_day_result = $events->fetch_assoc();
                 </div>
             <?php endforeach; ?>
 
-            <div class="event-card">
+            <div class="event-card my-2">
                 <h2 class="event-card-title">Accommodation and Local Taxi Companies</h2>
                 <p>Spalding and the surrounding area has a good selection of hotels. Here some that you can choose from.</p>
                 <p>We have also listed some local taxi companies that we would recommend using.</p>
@@ -107,6 +107,22 @@ $events_day_result = $events->fetch_assoc();
                     </div>
 
                 </div>
+            </div>
+            <div class="event-card">
+                <h2 class="event-card-title">Parking</h2>
+                <p>The Sessions house has limited parking spaces, therefore, please use the car park below. This is situated within walking distance of our venue and offers long stay parking.</p>
+
+                <ul role="list">
+                    <li class="event-card-sub-card">
+                        <h3>Victoria Street Car Park </h3>
+                        <h4>Address</h4>
+                        <p class="mb-2">13 Winsover Rd, Spalding PE11 1EW</p>
+                        <?php echo '<iframe frameborder="0" width="100%" height="200px" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=' . str_replace(",", "", str_replace(" ", "+", "Visctoria Street Car Park,13 Winsover Rd, Spalding PE11 1EW, United Kingdom")) . '&z=14&output=embed"></iframe>'; ?>
+
+                    </li>
+
+                </ul>
+
             </div>
 
         </section>
