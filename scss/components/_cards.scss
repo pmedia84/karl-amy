@@ -51,8 +51,9 @@
     font-size: $fs-150;
 }
 
-.event-rsvp {
-    margin-top: $spacer-3;
+//sub card for event card, highlight extra info or cta
+.event-card-sub-card {
+    margin-block: $spacer-2;
     width: 100%;
     display: flex;
     flex-direction: column;

@@ -18,6 +18,7 @@ body {
 
 $fs-100: 1rem;
 $fs-125: 1.25rem;
+$fs-130: 1.3rem;
 $fs-150: 1.5rem;
 $fs-200: 2rem;
 $fs-250: 2.5rem;
@@ -30,7 +31,10 @@ $fs-350: 3.5rem;
     color: $primary;
     font-weight: 300;
 }
-
+h1,h2,h3,h4,h5{
+    margin-top: .375em;
+    margin-bottom: 0;
+}
 h1 {
     font-size: $fs-350 ;
 }
@@ -43,6 +47,14 @@ h2 {
 h3{
     font-size: $fs-150;
     font-weight: 300;
+}
+h4{
+    font-size: $fs-130;
+    font-weight: 400;
+}
+h5{
+    font-size: $fs-100;
+    font-weight: 400;
 }
 
 .section-subtitle {

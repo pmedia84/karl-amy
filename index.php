@@ -39,7 +39,7 @@ $gallery = $db->query($gallery_query);
                         </div>
                         <div class="profile-card-body">
                             <h3>Karl</h3>
-                            <p>Finally following his career goal of web development with his own business <a href="https://www.parrotmedia.co.uk" target="_blank">(Parrot Media)</a> And an amazing dad to our 11 children.</p>
+                            <p>Finally following his career goal of web development with his own business <a href="https://www.parrotmedia.co.uk" target="_blank">(Parrot Media)</a>, he is also an amazing dad to our 11 children.</p>
                         </div>
                     </div>
                     <div class="center-card">
@@ -104,11 +104,11 @@ $gallery = $db->query($gallery_query);
                         <div class="event-card-col">
                             <h3 class="event-card-title">The Venue</h3>
                             <p class="event-location">The Sessions House, Spalding</p>
-                            <p>We are saying "I Do" at The Sessions House in Spalding. It is an amazing venue which we fell in love with and we knew it would be the perfect venue the moment we went to view it.</p>
+                            <p>We are saying "I Do" at The Sessions House in Spalding. It is a fantastic venue which we fell in love with. We knew it would be the perfect venue the moment we viewed it.  </p>
                             <br>
-                            <p>Our dream venue is Spalding old magistrates court, the owners have worked hard to keep a lot of original features alongside being able to turn it into a venue for all different events including our wedding. The character featured in this venue is incredible, it is very quirky and out of this world.</p>
+                            <p>Our dream venue is Spalding's old magistrate court. The character this venue features is very quirky and out of this world. The owners have worked hard to keep a lot of original features alongside being able to turn it into a venue for a variety of events, including our wedding.</p>
                             <br>
-                            <p>We hope that when you join us in celebrating our special day you too, will agree with us.</p>
+                            <p>We hope that when you join us in celebrating our special day you will agree with us.</p>
                         </div>
                         <img src="assets/img/venue/sessions-house-2.webp" alt="">
                     </div>
