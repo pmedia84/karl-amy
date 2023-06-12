@@ -7,15 +7,12 @@ $events_day_result = $events->fetch_assoc();
 ?>
 <title>The Wedding of <?= $wedding_name; ?> | Our Story</title>
 </head>
-
 <body>
-
     <div class="hero day-hero">
         <?php include("inc/nav.inc.php"); ?>
         <div class="hero-container text-center">
             <h1 class="hero-title ">Our Big Day!</h1>
             <div class="gallery-card">
-
                 <div class="gallery-card-img">
                     <img src="assets/img/venue/sessions-house-2.webp" height="250px" alt="">
                 </div>
@@ -23,10 +20,8 @@ $events_day_result = $events->fetch_assoc();
                     <p>The Sessions House</p>
                 </div>
             </div>
-
         </div>
     </div>
-
     <main>
         <section class="container my-3 " id="sectionone">
             <h2 class="text-center">Our Big Day</h2>
@@ -85,14 +80,30 @@ $events_day_result = $events->fetch_assoc();
                             <li class="event-card-sub-card">
                                 <h4>Cley Hall Hotel </h4>
                                 <h5>Website</h5>
-                                <p><a href="https://www.cleyhall.com/">www.cleyhall.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
-
-                                <h5>Address</h5>
-                                <p> 22 High Street, Spalding, Lincolnshire, PE11 1TX</p>
+                                <p><a href="https://www.cleyhall.com/" target="_blank">www.cleyhall.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
                                 <h5>Phone No.</h5>
                                 <p><a href="tel:01775 725157">01775 725157</a></p>
                             </li>
-
+                            <li class="event-card-sub-card">
+                                <h4>Woodlands Hotel</h4>
+                                <h5>Website</h5>
+                                <p><a href="http://www.woodlandshotelspalding.com/" target="_blank">www.woodlandshotelspalding.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                                <h5>Phone No.</h5>
+                                <p><a href="tel:01775 725157">01775 769933</a></p>
+                            </li>
+                            </li>
+                            <li class="event-card-sub-card">
+                                <h4>Red Lion Hotel</h4>
+                                <h5>Website</h5>
+                                <p><a href="http://www.redlionhotel.co.uk/" target="_blank">www.redlionhotel.co.uk <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                                <h5>Phone No.</h5>
+                                <p><a href="tel:01775 725157">01775 722869</a></p>
+                            </li>
+                            <li class="event-card-sub-card">
+                                <h4>Travelodge Spalding</h4>
+                                <h5>Website</h5>
+                                <p><a href="https://www.travelodge.co.uk/hotels/370/spalding-hotel?utm_source=google&utm_medium=GHA_Organic&utm_campaign=GHA_Spalding&WT.tsrc=GHA_Organic" target="_blank">www.travelodge.co.uk <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                            </li>
                         </ul>
                     </div>
                     <div class="event-card-col">
@@ -102,6 +113,16 @@ $events_day_result = $events->fetch_assoc();
                                 <h4>Spalding Taxis</h4>
                                 <h5>Phone No.</h5>
                                 <p><a href="tel:01775 722 115">01775 722 115</a></p>
+                            </li>
+                            <li class="event-card-sub-card">
+                                <h4>A1 Taxis Spalding</h4>
+                                <h5>Phone No.</h5>
+                                <p><a href="tel:01775714545">01775 714545</a></p>
+                            </li>
+                            <li class="event-card-sub-card">
+                                <h4>Royal Taxis</h4>
+                                <h5>Phone No.</h5>
+                                <p><a href="tel:01775714714">01775 714714</a></p>
                             </li>
                         </ul>
                     </div>

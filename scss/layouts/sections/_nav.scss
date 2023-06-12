@@ -1,3 +1,4 @@
+$nav-bg:rgba(255, 255, 255, 0.653);
 .nav-container {
     padding: 1rem 2rem;
     z-index: 100;
@@ -5,9 +6,10 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(4px);
-    border-bottom: 2px solid transparent;
+    background: $nav-bg;
+    backdrop-filter: blur(8px);
+    transition: border 300ms ease-out;
+    
 }
 
 .nav-bar {
@@ -25,10 +27,9 @@
     font-family: $ff-handwriting;
     opacity: 1;
     transition: opacity 600ms ease;
-
     a {
         text-decoration: none;
-        color: rgb(255, 255, 255);
+        color: $secondary;
         font-weight: 400;
         transition: color 400ms ease-out;
 
@@ -65,7 +66,7 @@
     margin: 0;
     padding: 0;
     padding: $spacer-3;
-    background-color: $primary-900;
+    background-color: $primary-950;
     border-bottom: 2px solid $primary;
 
     li {
@@ -188,36 +189,34 @@
 
 //!mobile settings for nav bar on scroll
 .nav-container[data-nav="top"] {
-    background-color: transparent;
     animation: nav-top 400ms ease-in forwards;
-    .nav-brand a {
-        color: $primary-950;
-        transition: color 400ms ease-in;
-
-    }
+   
 }
 
 .nav-container[data-nav="scrolled"] {
     animation: nav-scrolled 400ms ease-in forwards;
-    .nav-brand a {
-        color: $primary;
-        transition: color 400ms ease-in;
-    }
+   
+.nav-brand a{
+    color: $primary;
+}
 
 
 }
 @keyframes nav-top{
     0%{background-color: $primary-950;}
-    100%{background-color: transparent;}
+    100%{background-color: $nav-bg;}
 }
 @keyframes nav-scrolled{
-    0%{background-color: transparent;}
+    0%{background-color: $nav-bg;}
     100%{background-color: $primary-950;}
 }
 ///!
 //?Wider screen Settings
 @media(min-width:$x-lg) {
-
+.nav-container{
+    border-bottom: 2px solid;
+    border-color: transparent;
+}
     .nav-bar {
         //inner nav bar
         display: flex;
@@ -248,7 +247,7 @@
         a {
             margin-block: 0;
 
-            color: $primary-950;
+            color: $secondary;
 
         }
 
@@ -259,14 +258,15 @@
     }
 
     .nav-container[data-nav="top"] {
-
+        border-color: transparent;
         .nav-links a {
-            color: $primary-950;
+            color: $secondary;
             transition: color 400ms ease-out;
         }
     }
 
     .nav-container[data-nav="scrolled"] {
+        border-color: $primary;
         .nav-links a {
             color: $primary;
             transition: color 400ms ease-out;

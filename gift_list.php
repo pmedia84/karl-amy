@@ -23,7 +23,6 @@ $gift_list = $db->query('SELECT * FROM gift_list');
                     <p>Date Night In Norwich</p>
                 </div>
             </div>
-            <p><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
         </div>
     </div>
     <main>

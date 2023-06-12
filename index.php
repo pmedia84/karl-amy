@@ -19,7 +19,7 @@ $gallery = $db->query($gallery_query);
                     <img src="assets/img/hero/index-hero-card.webp" height="250px" alt="">
                 </div>
                 <div class="gallery-card-footer">
-                    <p>Engagement Day!</p>
+                    <!-- <p>Engagement Day!</p> -->
                 </div>
             </div>
             <p><?= $event_location; ?></p>

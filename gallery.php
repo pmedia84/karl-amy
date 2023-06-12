@@ -21,8 +21,6 @@ $images = $db->query('SELECT * FROM images WHERE image_placement="Gallery" AND s
           <p>Our First Selfie</p>
         </div>
       </div>
-
-      <p><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
     </div>
   </div>
 
