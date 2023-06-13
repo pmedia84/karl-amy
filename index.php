@@ -16,7 +16,7 @@ $gallery = $db->query($gallery_query);
             <h1 class="hero-title">We Are Getting Married!</h1>
             <div class="gallery-card">
                 <div class="gallery-card-img">
-                    <img src="assets/img/hero/index-hero-card.webp" height="250px" alt="">
+                    <img src="assets/img/hero/index-hero-card.webp" height="250px" alt="Amy Male and Karl Besley.">
                 </div>
                 <div class="gallery-card-footer">
                     <!-- <p>Engagement Day!</p> -->
@@ -87,7 +87,7 @@ $gallery = $db->query($gallery_query);
                 </div>
 
                 <div class="countdown-footer text-center">
-                    <p><?php echo $wedding_date = date('l jS F Y', $weddingdate); ?></p>
+                   
                 </div>
 
 
@@ -112,7 +112,7 @@ $gallery = $db->query($gallery_query);
                         </div>
                         <img src="assets/img/venue/sessions-house-2.webp" alt="">
                     </div>
-                    <div class="event-rsvp">
+                    <div class="event-card-sub-card">
                         <h3>Find Out More</h3>
                         <p>You can find out more about or big day here.</p>
                         <a href="theday" class="btn-primary my-2">Find Out More</a>

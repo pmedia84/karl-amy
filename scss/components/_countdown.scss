@@ -1,13 +1,28 @@
 .countdown-container{
-  background-image: url("../../assets/img/venue/sessions-house-2.webp");
+  background-image: url("../../assets/img/bg-img/amy-karl-1-sm.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 50vh;
+  min-height: 55vh;
   display: grid;
   grid-template-columns: 1fr;
   align-items:end;
   justify-content: center;
+}
+@media(min-width:$md){
+  .countdown-container{
+    background-image: url("../../assets/img/bg-img/amy-karl-1-md.webp");
+  }
+}
+@media(min-width:$lg){
+  .countdown-container{
+    background-image: url("../../assets/img/bg-img/amy-karl-1-lg.webp");
+  }
+}
+@media(min-width:$x-lg){
+  .countdown-container{
+    background-image: url("../../assets/img/bg-img/amy-karl-1-x-lg.webp");
+  }
 }
 .countdown-body{
   width: 80%;
@@ -26,14 +41,14 @@
   .hours,
   .minutes,
   .seconds {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(4px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 2rem;
     font-weight: 200;
-    color: $primary-950;
+    color: $tertiary-col;
     border-top-left-radius:$border-radius-2;
     border-top-right-radius:$border-radius-2;
     border: 1px solid $primary;
@@ -62,7 +77,7 @@
     position: relative;
     padding-block: $spacer-3;
     p{
-      color: $primary-950;
+      color: $primary;
       font-size: $fs-125;
     }
 
