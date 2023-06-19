@@ -101,7 +101,11 @@ $(window).on('load', function() {
     }
   
     $('.accept-cookies').on('click', function() {
-      document.cookie = "accepted_cookies=yes;"
+        let exdays = 182;
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+      document.cookie = "accepted_cookies=yes;"+ expires;
       $('.cookie-overlay').fadeOut(400);
     })
   
