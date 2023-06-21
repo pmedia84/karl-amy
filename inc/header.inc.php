@@ -28,7 +28,7 @@ include("settings.php");
     <!-- Google Recaptcha -->
     <script src="https://www.google.com/recaptcha/api.js?render=6LdLOSYkAAAAAMhX6ojn3hk-B6v3-NWkLb-YrdB-" async="false"></script>
     <!-- Theme Color for safari and mobile browsers -->
-    <meta name="theme-color" content="#7E688C" />
+    <meta name="theme-color" content="#cc5500" />
     <!-- OG Meta Tags -->
     <meta property="og:title" content="<?= $wedding_name; ?>'s Wedding Website">
     <meta property="og:description" content="Find out about our big day and respond to your invitation">
