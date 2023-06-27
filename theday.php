@@ -7,6 +7,7 @@ $events_day_result = $events->fetch_assoc();
 ?>
 <title>The Wedding of <?= $wedding_name; ?> | Our Story</title>
 </head>
+
 <body>
     <div class="hero day-hero">
         <?php include("inc/nav.inc.php"); ?>
@@ -137,7 +138,7 @@ $events_day_result = $events->fetch_assoc();
                     <li class="event-card-sub-card">
                         <h3>Victoria Street Car Park </h3>
                         <h4>Address</h4>
-                        <p class="mb-2">13 Winsover Rd, Spalding PE11 1EW</p>
+                        <p class="mb-2">Victoria Street, Spalding, Lincolnshire, PE11 1EA</p>
                         <?php echo '<iframe frameborder="0" width="100%" height="200px" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=' . str_replace(",", "", str_replace(" ", "+", "Visctoria Street Car Park,13 Winsover Rd, Spalding PE11 1EW, United Kingdom")) . '&z=14&output=embed"></iframe>'; ?>
 
                     </li>
