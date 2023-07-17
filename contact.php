@@ -83,7 +83,7 @@
         event.preventDefault(); //prevent form default submit
         //bring in recaptcha scripts and request token
         grecaptcha.ready(function() {
-            grecaptcha.execute('6LdLOSYkAAAAAMhX6ojn3hk-B6v3-NWkLb-YrdB-', {
+            grecaptcha.execute('6LcSli4nAAAAAJStg7wDVfT8mjBqzBL9kv6REx52', {
                 action: 'submit'
             }).then(function(token) {
                 var formData = new FormData($("#contact").get(0));
